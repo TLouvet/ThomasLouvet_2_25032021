@@ -1,0 +1,127 @@
+@font-face{
+    font-family: 'Raleway';
+src: url('Raleway-VariableFont_wght.ttf')
+}
+
+/* Version PC*/
+
+/*Aussi bien sur laptop que desktop*/
+footer{
+    height: 219px;
+}
+
+header{
+    height: 100px;
+}
+
+/* Global, s'applique de la même façon sur toute la page */
+
+*{
+    font-family: 'Raleway',sans-serif;
+}
+ul {
+    list-style-type: none;
+}
+
+a {
+    color :black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #0065FC;
+}
+
+/* Header */
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li{
+    margin-right: 15px;
+}
+
+/*Centre*/
+#centre{
+    margin-left: 50px; /*PC - 20px sur petite rés*/
+}
+#filtre_wrap{
+    display: flex;
+}
+
+.filtre{
+    border-radius:20px;
+    border: 2px solid #F2F2F2;
+    margin-right: 25px; /*PC*/
+}
+
+#info{
+    display: flex;
+
+}
+
+#hebergement{
+    display: flex;
+}
+
+#hbgtspop{
+    background-color: #F2F2F2;
+    padding-left: 40px; /*PC*/
+    padding-top:20px;
+    border-radius: 20px;
+    height: 625px;
+    width:61%;
+}
+
+#heberg_box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.single_heberg_box{
+    height: 200px; /* PC ET MOBILES*/
+    width: 27%;/* PC - 320 sur mobiles*/
+    background-color: white;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 5px 10px 5px rgb(220,220,220) ;
+}
+
+#mostpop{
+    margin-right: 50px; /*PC*/
+    padding-top:20px; /*PC*/
+    margin-left: 40px;
+    padding-left:40px;
+    width: 29%;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+}
+/*Footer*/
+footer{
+    width: 100%;
+    background-color: #F2F2F2;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+footer li{
+    padding-bottom: 15px;
+}
+
