@@ -50,14 +50,29 @@ header{
     justify-content: space-between;
 }
 
+#logo{
+    padding: 50px 0;
+}
+
 nav ul{
     list-style-type: none;
     display: flex;
     justify-content: space-between;
+    margin-top: 0;
+    margin-right: 50px;
 }
 
 nav li{
-    margin-right: 15px; /*pas bon*/
+    padding: 50px 20px;
+}
+
+nav li:hover{
+    border-top: 2px solid #0065FC;
+}
+
+#inscription{
+    font-family: 'Raleway Bold';
+    color: #0065FC;
 }
 
 /*Centre*/
@@ -72,9 +87,6 @@ nav li{
     margin-bottom: 10px;
 }
 
-#centre h3{
-    margin-top: none;
-}
 
 /*Recherche par ville */
 #barre_recherche{
@@ -95,10 +107,10 @@ nav li{
 #barre_recherche input{
     font-weight: bold;
     padding-left: 15px;
-    height: 45px;
+    height: 46px;
     border-left: none;
     border-right: none;
-    border-color: 1px #F2F2F2 solid;
+    border-bottom: 1px #F2F2F2 solid;
     border-top: 1px #F2F2F2 solid;
 
     font-family: 'Raleway Bold', sans-serif;
@@ -185,6 +197,7 @@ nav li{
 /*Section où sont présentés les hébergements*/
 #hebergement{
     display: flex;
+    justify-content: space-around;
 }
 
 #hbgtspop{
@@ -198,6 +211,7 @@ nav li{
 
 #heberg_box{
     display: flex;
+    padding-right: 40px;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: auto;
@@ -207,7 +221,6 @@ nav li{
     height: 200px; /* PC ET MOBILES*/
     width: 27%;/* PC - 320 sur mobiles*/
     background-color: white;
-    margin-right: 30px;
     margin-bottom: 30px;
     border-radius: 20px;
     box-shadow: 5px 10px 5px rgb(220,220,220) ;
@@ -225,6 +238,7 @@ nav li{
     width:95%; /*Pas trouvé autre mais ce n'est pas la bonne façon de faire*/
     margin: auto;
     border-radius: 20px 20px 0 0;
+    object-fit: cover;
 }
 /*JUSTQUE LA*/
 
@@ -237,6 +251,7 @@ nav li{
     margin-top: 0;
     margin-bottom: 5px;
 }
+
 .texte_gras{
     font-weight: bold;
 }
@@ -251,19 +266,115 @@ nav li{
 
 /*Partie Droite*/
 #mostpop{
-    padding-top:20px; /*PC*/
     margin-left: 40px;
-    padding-left:40px;
+    padding: 45px 40px 0 40px;
     width: 29%;
     background-color: #F2F2F2;
     border-radius: 20px;
 }
+
+#most_pop_title h1{
+    margin: 0;
+}
+
+#most_pop_title{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#mostpop_boxwrap{
+    display: flex;
+    flex-direction: column;
+    margin-top:25px;
+}
+
+.mostpop_box{
+    display: flex;
+    height: 145px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 5px 10px 5px rgb(220,220,220) ;
+    margin-bottom: 35px;
+}
+
+.mostpop_box a{
+    display: flex;
+}
+
+.mostpop_img{
+    height:135px;
+    margin:0;
+    padding: 5px 0 5px 5px;
+    min-width:40%;
+    width:40%;
+}
+
+.mostpop_img img{
+    width:100%;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+}
+
+.mostpop_box_text{
+  padding: 20px 20px 15px 20px;
+}
+
+.mostpop_box_text h3{
+    margin-bottom:10px;
+}
+
+.mostpop_box_text p{
+    margin:0 0 25px 0;
+}
+
+/*Activités*/
+#act_box_wrap{
+    display: flex;
+    margin-bottom: 60px;
+    justify-content: space-between;
+}
+
+.act_small_box_wrap{
+    width:22%;
+    box-shadow: 5px 10px 5px rgb(220,220,220);
+}
+
+.act_big_box{
+    width: 22%;
+    height:440px;
+    border-radius: 20px;
+    box-shadow: 5px 10px 5px rgb(220,220,220);
+}
+
+.act_big_img{
+    margin:0;
+}
+
+.act_big_box img{
+    width:100%;
+    border-radius: 20px 20px 0 0;
+    height: 390px;
+    object-fit: cover;
+}
+
+.act_big_box h4{
+    padding-left: 20px;
+    padding-top: 10px;
+    margin:0;
+}
+
+.act_small_box_wrap{
+    display: flex;
+    flex-direction: column;
+}
+
 /*Footer*/
 footer{
-    width: 100%;
+    padding-left: 50px;
     background-color: #F2F2F2;
     display: flex;
-    justify-content: space-around;
     margin: auto;
 }
 
@@ -274,9 +385,11 @@ footer ul{
 
 footer li{
     padding-bottom: 15px;
+    padding-right: 300px; /*Pas possible sur mobile*/
 }
 
 .footer_sous_liste{
     padding-top:50px;
 }
+
 
