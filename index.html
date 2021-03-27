@@ -4,13 +4,14 @@
         <meta charset="utf-8"/>
         <title>Reservia</title>
         <link rel="stylesheet" href="styles.css"/>
+        <script src="https://kit.fontawesome.com/e6725f03e5.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
         <header> <!--logo + navbar-->
             <div id="logo">
                 <a href="#"></a>
-                    <img src="#" alt="Logo Réservia"/>
+                    <img src="logo/Reservia.svg" alt="Logo Réservia"/>
                 </a>
             </div>
 
@@ -24,88 +25,154 @@
         </header>
 
         <div id="centre">
-            <h1> Trouvez votre hébergement pour des vacances de rêve</h1>
-            <p>En plein centre ville ou en pleine nature</p>
+            <h2 id="main_title"> Trouvez votre hébergement pour des vacances de rêve</h2>
+            <h3>En plein centre ville ou en pleine nature</h3>
 
             <div id="barre_recherche">
-                <img src="#"/> 
-                <form></form>
+               <span id="location_icon"><i class="fas fa-map-marker-alt"></i></span>
+                <form><input type="text"name="ville" value="Marseille, France" /></form>
                 <button>Rechercher</button>
             </div>
 
-            <!--Créer une super box qui contient les 4 pour les aligner facilement-->
+            <!--Filtres-->
+    
             <div id ="filtre_wrap">
-            <p>Filtre</p>
-            <div class="filtre">
-                <img src="#"/> <!-- Billet -->
-                <p>Economique</p>
+                <p><span id="filtre_title">Filtres</span></p>
+                <div class="filtre">
+                    <a href="#">
+                        <span class="round_blue_bck"><i class="fas fa-money-bill-wave"></i></span>
+                        <p>Economique</p>
+                    </a>
+                </div>
+
+                <div class="filtre">
+                    <span class="round_blue_bck"><i class="fas fa-child"></i></span>
+                    <p>Familial</p>
+                </div>  
+
+                <div class ="filtre">
+                    <span class="round_blue_bck"><i class="fas fa-heart"></i></span>
+                    <p>Romantique</p>
+                </div>
+
+                <div class ="filtre">
+                    <span class="round_blue_bck"><i class="fas fa-dog"></i></span>
+                    <p>Animaux autorisés</p>
+                </div>
             </div>
 
-            <div class="filtre">
-                <img src="#"/> <!--Humain 2 bras en l'air  -->
-                <p>Familial</p>
-            </div>  
-
-            <div class ="filtre">
-                <img src="#" /> <!-- Coeur-->
-                <p>Romantique</p>
-            </div>
-
-            <div class ="filtre">
-                <img src="#"/> <!--Petit chien-->
-                <p>Animaux autorisés</p>
-            </div>
-            </div>
-            <!--Fin du filtre-->
+            <!--Info logements dispo-->
 
             <div id="info"> 
-                <img class="ip" src="#"> <!--i pour info-->
+                <span id="info_round"><i class="fas fa-info"></i></span>
                 <p>Plus de 500 logements sont disponibles dans cette ville</p>
             </div>
 
+            <!--Hébergement-->
             <div id="hebergement">
                 <section id ="hbgtspop">
                     <h1>Hébergements à Marseille</h1>
                     <div id="heberg_box">
                         <div class="single_heberg_box">
                             <a href="#">
-                                <img src="#"/>
+                                <p class="img_hbg"><img src="imgs/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"  /></p>
+                                <div class="text_heberg_box">
+                                    <h3 class="sous-titre_hbg">Auberge de la Cannebière</h3>
+                                    <p style="margin: none;">Nuit à partir de <span class="texte_gras">25€</span></p>
+                                    <span class="blue_star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </span>
+                                    <span class="grey_star"><i class="fas fa-star"></i></span>
+                                </div>
                             </a>
-                        
-                        </div>
-                        <div class="single_heberg_box">
-                            <a href="#">
-                                <img src="#"/>
-                            </a>
-                        
-                        </div>
-
-                        <div class="single_heberg_box">
-                            <a href="#">
-                                <img src="#"/>
-                            </a>
-                        
                         </div>
 
                         <div class="single_heberg_box">
                             <a href="#">
-                                <img src="#"/>
+                               <p class="img_hbg"> <img src="imgs/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" /></p>
+                                <div class="text_heberg_box">
+                                    <h3 class="sous-titre_hbg">Hôtel du port</h3>
+                                    <p style="margin: none;">Nuit à partir de <span class="texte_gras">57€</span></p>
+                                    <span class="blue_star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </span>
+                                </div>
                             </a>
-                        
                         </div>
 
                         <div class="single_heberg_box">
                             <a href="#">
-                                <img src="#"/>
-                            </a>
-                        
+                              <p class="img_hbg"><img src="imgs/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" /></p>
+                                <div class="text_heberg_box">
+                                    <h3 class="sous-titre_hbg">Hôtel Les mouettes</h3>
+                                    <p style="margin: none;">Nuit à partir de <span class="texte_gras">76€</span></p>
+                                    <span class="blue_star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </span>                                  
+                                    <span class="grey_star"><i class="fas fa-star"></i></span>
+                                </div>
+                            </a>                        
                         </div>
 
                         <div class="single_heberg_box">
                             <a href="#">
-                                <img src="#"/>
+                               <p class="img_hbg"><img src="imgs/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" /></p>
+                                <div class="text_heberg_box">
+                                    <h3 class="sous-titre_hbg">Hôtel de la mer</h3>
+                                    <p style="margin: none;">Nuit à partir de <span class="texte_gras">46€</span></p>
+                                    <span class="blue_star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </span>      
+                                    <span class="grey_star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </span>
+                                </div>
+                            </a>                        
+                        </div>
+
+                        <div class="single_heberg_box">
+                            <a href="#">
+                               <p class="img_hbg"><img src="imgs/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" /></p>
+                                <div class="text_heberg_box">
+                                    <h4 class="sous-titre_hbg">Auberge Le Panier</h4>
+                                    <p style="margin: none;">Nuit à partir de <span class="texte_gras">23€</span></p>
+                                    <span class="blue_star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </span>
+                                    <span class="grey_star"><i class="fas fa-star"></i></span>
+                                </div> 
                             </a>
-                        
+                        </div>
+
+                        <div class="single_heberg_box">     
+                                <p class="img_hbg"><img src="imgs/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" /></p>
+                                <div class="text_heberg_box">
+                                    <h4 class="sous-titre_hbg">Hôtel chez Amina</h4>
+                                    <p style="margin: none;">Nuit à partir de <span class="texte_gras">96€</span></p>
+                                    <span class="blue_star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </span>
+                                </div>
                         </div>
                     </div>
 

@@ -3,6 +3,10 @@
 src: url('Raleway-VariableFont_wght.ttf')
 }
 
+@font-face{
+    font-family: 'Raleway Bold';
+src: url('Raleway-ExtraBold.ttf')
+}
 /* Version PC*/
 
 /*Aussi bien sur laptop que desktop*/
@@ -23,6 +27,7 @@ ul {
     list-style-type: none;
 }
 
+/*liens dans la page*/
 a {
     color :black;
     text-decoration: none;
@@ -31,6 +36,12 @@ a {
 a:hover{
     color: #0065FC;
 }
+
+
+body{
+    margin: 0 0 0 0;
+}
+
 
 /* Header */
 header{
@@ -46,28 +57,117 @@ nav ul{
 }
 
 nav li{
-    margin-right: 15px;
+    margin-right: 15px; /*pas bon*/
 }
 
 /*Centre*/
+
 #centre{
-    margin-left: 50px; /*PC - 20px sur petite rés*/
+    margin-left: 50px;
+    margin-right: 50px;
 }
+
+#main_title{
+    font-family: 'Raleway Bold', sans-serif;
+    margin-bottom: 10px;
+}
+
+#centre h3{
+    margin-top: none;
+}
+
+/*Recherche par ville */
+#barre_recherche{
+    display: flex;
+    height: 50px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+#location_icon{
+    padding-left:20px;
+    padding-right:20px;
+    border-radius: 10px 0 0 10px;
+    background-color: #F2F2F2;
+    padding-top: 15px;  
+}
+
+#barre_recherche input{
+    font-weight: bold;
+    padding-left: 15px;
+    height: 45px;
+    border-left: none;
+    border-right: none;
+    border-color: 1px #F2F2F2 solid;
+    border-top: 1px #F2F2F2 solid;
+}
+
+#barre_recherche button{ 
+    color:white;
+    background-color: #0065FC;
+    border-radius: 0 10px 10px 0;
+    border-style: none;
+    font-weight: bold;
+    padding-left:20px;
+    padding-right:15px;
+}
+
+/*Recherche par filtre*/
 #filtre_wrap{
     display: flex;
+    font-weight:bold;
+}
+
+#filtre_title{
+    margin-right:30px;
 }
 
 .filtre{
-    border-radius:20px;
-    border: 2px solid #F2F2F2;
-    margin-right: 25px; /*PC*/
+    height: 50px;
+    border-radius:30px;
+    border: 3px solid #F2F2F2;
+    border-left: none;
+    margin-right: 20px; /*PC*/
+    display: flex;
 }
 
+.filtre:hover{
+    background-color: #0065FC;
+    color: white;
+    font-weight: bolder; /*probablement pas la bonne police*/
+}
+
+.filtre a{
+    display: flex;
+}
+
+
+.round_blue_bck{
+    background-color: #DEEBFF;
+    color: #0065FC;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 25px;
+}
+
+.filtre p{
+    padding-left: 15px;
+    padding-right: 20px;
+}
+
+/*Logements dispo dans cette ville */
 #info{
     display: flex;
-
+    margin-bottom: 40px;
 }
 
+#info_round{  /*Border radius ???*/
+    border: 1px solid #F2F2F2;
+    margin-right: 10px;
+    color: #0065FC;
+}
+/*Section où sont présentés les hébergements*/
 #hebergement{
     display: flex;
 }
@@ -98,8 +198,44 @@ nav li{
     box-shadow: 5px 10px 5px rgb(220,220,220) ;
 }
 
+/*IL Y A UN TRUC A CHANGER LA*/
+.img_hbg{
+    margin-top:5px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.single_heberg_box img{
+    height:115px;
+    width:95%; /*Pas trouvé autre mais ce n'est pas la bonne façon de faire*/
+    margin: auto;
+    border-radius: 20px 20px 0 0;
+}
+/*JUSTQUE LA*/
+
+.text_heberg_box{
+    padding-left: 15px;
+    height: 80px;
+}
+
+.text_heberg_box p, h3, h4{ /*h3 à enlever potentiellement car inutilisé*/
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.texte_gras{
+    font-weight: bold;
+}
+
+.blue_star{
+    color: #0065FC;
+}
+
+.grey_star{
+    color: rgb(220,220,220);
+}
+
+/*Partie Droite*/
 #mostpop{
-    margin-right: 50px; /*PC*/
     padding-top:20px; /*PC*/
     margin-left: 40px;
     padding-left:40px;
@@ -111,9 +247,9 @@ nav li{
 footer{
     width: 100%;
     background-color: #F2F2F2;
-    margin: auto;
     display: flex;
     justify-content: space-around;
+    margin: auto;
 }
 
 footer ul{
@@ -123,5 +259,9 @@ footer ul{
 
 footer li{
     padding-bottom: 15px;
+}
+
+.footer_sous_liste{
+    padding-top:50px;
 }
 
