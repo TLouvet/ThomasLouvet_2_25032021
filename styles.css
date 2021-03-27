@@ -1,22 +1,21 @@
-<<<<<<< HEAD
 @font-face{
     font-family: 'Raleway';
-src: url('Raleway-VariableFont_wght.ttf')
+src: url('fonts/Raleway-VariableFont_wght.ttf')
 }
 
 @font-face{
     font-family: 'Raleway Bold';
-src: url('Raleway-ExtraBold.ttf')
+src: url('fonts/Raleway-ExtraBold.ttf')
 }
 /* Version PC*/
 
 /*Aussi bien sur laptop que desktop*/
 footer{
-    height: 219px;
+    min-height: 219px;
 }
 
 header{
-    height: 100px;
+    min-height: 100px;
 }
 
 /* Global, s'applique de la même façon sur toute la page */
@@ -46,7 +45,7 @@ body{
 
 /* Header */
 header{
-    width: 100%;
+    padding-left:50px;
     display: flex;
     justify-content: space-between;
 }
@@ -101,6 +100,9 @@ nav li{
     border-right: none;
     border-color: 1px #F2F2F2 solid;
     border-top: 1px #F2F2F2 solid;
+
+    font-family: 'Raleway Bold', sans-serif;
+    font-size: 1em;
 }
 
 #barre_recherche button{ 
@@ -111,6 +113,13 @@ nav li{
     font-weight: bold;
     padding-left:20px;
     padding-right:15px;
+
+    font-family: 'Raleway Bold', sans-serif;
+}
+
+#barre_recherche button:hover{
+    background-color: #DEEBFF;
+    color:#0065FC;
 }
 
 /*Recherche par filtre*/
@@ -121,6 +130,12 @@ nav li{
 
 #filtre_title{
     margin-right:30px;
+    font-family: 'Raleway Bold', sans-serif;
+
+}
+
+.filtre p{
+    font-family: 'Raleway Bold', sans-serif;
 }
 
 .filtre{
@@ -130,18 +145,17 @@ nav li{
     border-left: none;
     margin-right: 20px; /*PC*/
     display: flex;
-}
 
-.filtre:hover{
-    background-color: #0065FC;
-    color: white;
-    font-weight: bolder; /*probablement pas la bonne police*/
 }
 
 .filtre a{
     display: flex;
 }
 
+.filtre:hover{
+    background-color: #0065FC;
+    color: white;
+}
 
 .round_blue_bck{
     background-color: #DEEBFF;
@@ -266,5 +280,3 @@ footer li{
     padding-top:50px;
 }
 
-=======
->>>>>>> parent of 4254c7e... Mise en place d'une grande partie de la structure html(header/footer complétés, principales divisions effectuées) et un peu de css. Ajout de la police Raleway
