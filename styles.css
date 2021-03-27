@@ -23,10 +23,14 @@ header{
 *{
     font-family: 'Raleway',sans-serif;
 }
+
 ul {
     list-style-type: none;
 }
 
+img{
+    object-fit: cover;
+}
 /*liens dans la page*/
 a {
     color :black;
@@ -39,7 +43,7 @@ a:hover{
 
 
 body{
-    margin: 0 0 0 0;
+    margin: 0;
 }
 
 
@@ -138,6 +142,8 @@ nav li:hover{
 #filtre_wrap{
     display: flex;
     font-weight:bold;
+    margin-bottom: 40px;
+    font-size: 1em;
 }
 
 #filtre_title{
@@ -170,12 +176,17 @@ nav li:hover{
 }
 
 .round_blue_bck{
+    width:50px;
+    height:50px;
     background-color: #DEEBFF;
     color: #0065FC;
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
     border-radius: 25px;
+
+    /*aligne l'icone à l'intérieur*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .filtre p{
@@ -189,8 +200,16 @@ nav li:hover{
     margin-bottom: 40px;
 }
 
+#info p{
+    margin:0; /*Global*/
+    padding-top: 2px;
+}
+
 #info_round{  /*Border radius ???*/
-    border: 1px solid #F2F2F2;
+    border: 2px solid #F2F2F2;
+    border-radius: 20px;
+    padding: 1px 6px;
+    margin-top:0;
     margin-right: 10px;
     color: #0065FC;
 }
@@ -238,7 +257,6 @@ nav li:hover{
     width:95%; /*Pas trouvé autre mais ce n'est pas la bonne façon de faire*/
     margin: auto;
     border-radius: 20px 20px 0 0;
-    object-fit: cover;
 }
 /*JUSTQUE LA*/
 
@@ -314,7 +332,6 @@ nav li:hover{
     width:100%;
     height: 100%;
     border-radius: 20px 0 0 20px;
-    object-fit: cover;
 }
 
 .mostpop_box_text{
@@ -330,6 +347,25 @@ nav li:hover{
 }
 
 /*Activités*/
+
+#act div{
+    border-radius: 20px;
+}
+
+#act img{
+    width:100%; /*Les images ont toutes besoin de s'étirer à 100% de la largeur de l'élément dans cette section*/
+    border-radius: 20px 20px 0 0;
+}
+
+#act p{
+    margin: 0; /*GLOBAL*/
+}
+
+#act h4{
+    margin:0; /*GLOBAL*/
+    padding-top: 20px;
+    padding-left: 20px;
+}
 #act_box_wrap{
     display: flex;
     margin-bottom: 60px;
@@ -338,54 +374,82 @@ nav li:hover{
 
 .act_small_box_wrap{
     width:22%;
-    box-shadow: 5px 10px 5px rgb(220,220,220);
+    height:440px;
 }
 
 .act_big_box{
     width: 22%;
     height:440px;
-    border-radius: 20px;
     box-shadow: 5px 10px 5px rgb(220,220,220);
 }
 
-.act_big_img{
-    margin:0;
-}
-
 .act_big_box img{
-    width:100%;
-    border-radius: 20px 20px 0 0;
-    height: 390px;
-    object-fit: cover;
-}
-
-.act_big_box h4{
-    padding-left: 20px;
-    padding-top: 10px;
-    margin:0;
+    height: 385px;
 }
 
 .act_small_box_wrap{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
+
+.act_small_box_wrap img{
+    border-radius: 20px;
+}
+
+#act_smallbox_large{
+    height: 235px;
+    box-shadow: 5px 10px 5px rgb(220,220,220);
+}
+
+#act_smallbox_large img{
+    height:180px;
+}
+
+#act_smallbox_small{
+    height: 165px;
+    box-shadow: 5px 10px 5px rgb(220,220,220);
+}
+
+#act_smallbox_small img{
+    height:110px;
+}
+
+#act_smallbox_medium{
+    height: 195px;;
+    box-shadow: 5px 10px 5px rgb(220,220,220);
+}
+
+#act_smallbox_medium img{
+    height:140px;
+}
+
+#act_smallbox_medium_plus{
+    height:210px;
+    box-shadow: 5px 10px 5px rgb(220,220,220);
+}
+
+#act_smallbox_medium_plus img{
+    height:155px;
+}
+
 
 /*Footer*/
 footer{
     padding-left: 50px;
+    padding-right:50px;
     background-color: #F2F2F2;
     display: flex;
-    margin: auto;
 }
 
 footer ul{
     list-style-type: none;
     padding-left: 0;
+    padding-right: 225px; /*Probablement pas la bonne solution*/
 }
 
 footer li{
     padding-bottom: 15px;
-    padding-right: 300px; /*Pas possible sur mobile*/
 }
 
 .footer_sous_liste{
