@@ -10,9 +10,7 @@ src: url('fonts/Raleway-ExtraBold.ttf')
 /* Version PC*/
 
 /*Aussi bien sur laptop que desktop*/
-footer{
-    min-height: 219px;
-}
+
 
 header{
     min-height: 100px;
@@ -24,13 +22,16 @@ header{
     font-family: 'Raleway',sans-serif;
 }
 
+/*aucune liste ne contiendra de puce*/
 ul {
     list-style-type: none;
 }
 
+/*Je n'ai que des photos cover qui ont besoin de s'adapter*/
 img{
     object-fit: cover;
 }
+
 /*liens dans la page*/
 a {
     color :black;
@@ -41,21 +42,25 @@ a:hover{
     color: #0065FC;
 }
 
-
 body{
+    margin:0;
+}
+
+header, #centre{
     margin: 0;
+    padding-left: 50px; /*high res*/
+    padding-right: 50px;/*hight res*/
 }
 
 
 /* Header */
 header{
-    padding-left:50px;
     display: flex;
     justify-content: space-between;
 }
 
 #logo{
-    padding: 50px 0;
+    padding: 50px 0 30px 0;
 }
 
 nav ul{
@@ -63,7 +68,6 @@ nav ul{
     display: flex;
     justify-content: space-between;
     margin-top: 0;
-    margin-right: 50px;
 }
 
 nav li{
@@ -80,11 +84,6 @@ nav li:hover{
 }
 
 /*Centre*/
-
-#centre{
-    margin-left: 50px;
-    margin-right: 50px;
-}
 
 #main_title{
     font-family: 'Raleway Bold', sans-serif;
@@ -183,6 +182,7 @@ nav li:hover{
     height:50px;
     background-color: #DEEBFF;
     color: #0065FC;
+    scale: 2.5;
     border-radius: 25px;
 
     /*aligne l'icone à l'intérieur*/
@@ -191,6 +191,8 @@ nav li:hover{
     justify-content: center;
     align-items: center;
 }
+
+
 
 .filtre p{
     padding-left: 15px;
@@ -219,29 +221,36 @@ nav li:hover{
 /*Section où sont présentés les hébergements*/
 #hebergement{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    height:625px;
+    width:100%
 }
 
 #hbgtspop{
     background-color: #F2F2F2;
-    padding-left: 40px; /*PC*/
-    padding-top:20px;
+    padding: 45px 40px 30px 40px; /*PC*/
     border-radius: 20px;
-    height: 625px;
-    width:61%;
+    width:800px;
+
+}
+
+#hbgtspop h1{
+    margin-top:0;
+    margin-bottom: 20px;
 }
 
 #heberg_box{
+    height: 430px;
+    margin-top:0;
+    margin-bottom:40px;
     display: flex;
-    padding-right: 40px;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: auto;
 }
 
 .single_heberg_box{
     height: 200px; /* PC ET MOBILES*/
-    width: 27%;/* PC - 320 sur mobiles*/
+    width: 250px;/* PC - 320 sur mobiles*/
     background-color: white;
     margin-bottom: 30px;
     border-radius: 20px;
@@ -250,9 +259,10 @@ nav li:hover{
 
 /*IL Y A UN TRUC A CHANGER LA*/
 .img_hbg{
+    height:115px;
     margin-top:5px;
-    margin-bottom: 0;
     text-align: center;
+    margin-bottom: 0;
 }
 
 .single_heberg_box img{
@@ -264,11 +274,12 @@ nav li:hover{
 /*JUSTQUE LA*/
 
 .text_heberg_box{
+    padding-top: 10px;
     padding-left: 15px;
-    height: 80px;
+    height: 70px;
 }
 
-.text_heberg_box p, h3, h4{ /*h3 à enlever potentiellement car inutilisé*/
+.text_heberg_box p, h4{ /*h3 à enlever potentiellement car inutilisé*/
     margin-top: 0;
     margin-bottom: 5px;
 }
@@ -287,9 +298,8 @@ nav li:hover{
 
 /*Partie Droite*/
 #mostpop{
-    margin-left: 40px;
-    padding: 45px 40px 0 40px;
-    width: 29%;
+    padding: 45px 40px 35px 40px;
+    width: 340px;
     background-color: #F2F2F2;
     border-radius: 20px;
 }
@@ -301,6 +311,7 @@ nav li:hover{
 #most_pop_title{
     display: flex;
     justify-content: space-between;
+    align-items:baseline;
 }
 
 
@@ -308,6 +319,7 @@ nav li:hover{
     display: flex;
     flex-direction: column;
     margin-top:25px;
+    height:500px;
 }
 
 .mostpop_box{
@@ -316,7 +328,7 @@ nav li:hover{
     border-radius: 20px;
     background-color: white;
     box-shadow: 5px 5px 5px rgb(220,220,220) ;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .mostpop_box a{
@@ -341,8 +353,9 @@ nav li:hover{
   padding: 20px 20px 15px 20px;
 }
 
-.mostpop_box_text h3{
+.mostpop_box_text h4{
     margin-bottom:10px;
+    font-family: 'Raleway Bold', sans-serif;
 }
 
 .mostpop_box_text p{
@@ -377,12 +390,11 @@ nav li:hover{
 
 .act_small_box_wrap{
     width:22%;
-    height:440px;
+    height:445px;
 }
 
 .act_big_box{
     width: 22%;
-    height:440px;
     box-shadow: 5px 5px 5px rgb(220,220,220);
 }
 
@@ -406,7 +418,7 @@ nav li:hover{
 }
 
 #act_smallbox_large img{
-    height:180px;
+    height:175px;
 }
 
 #act_smallbox_small{
@@ -415,7 +427,7 @@ nav li:hover{
 }
 
 #act_smallbox_small img{
-    height:110px;
+    height:105px;
 }
 
 #act_smallbox_medium{
@@ -424,7 +436,7 @@ nav li:hover{
 }
 
 #act_smallbox_medium img{
-    height:140px;
+    height:135px;
 }
 
 #act_smallbox_medium_plus{
@@ -433,16 +445,21 @@ nav li:hover{
 }
 
 #act_smallbox_medium_plus img{
-    height:155px;
+    height:150px;
 }
 
 
 /*Footer*/
 footer{
-    padding-left: 50px;
-    padding-right:50px;
+    height:140px;
+    padding: 50px;
     background-color: #F2F2F2;
     display: flex;
+}
+
+footer h3{
+    margin-top:0;
+    margin-bottom:25px;
 }
 
 footer ul{
@@ -454,9 +471,3 @@ footer ul{
 footer li{
     padding-bottom: 15px;
 }
-
-.footer_sous_liste{
-    padding-top:50px;
-}
-
-
