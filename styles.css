@@ -89,6 +89,7 @@ nav li:hover{
 #main_title{
     font-family: 'Raleway Bold', sans-serif;
     margin-bottom: 10px;
+    margin-top: 0;
 }
 
 
@@ -136,6 +137,7 @@ nav li:hover{
 #barre_recherche button:hover{
     background-color: #DEEBFF;
     color:#0065FC;
+    cursor: pointer;
 }
 
 /*Recherche par filtre*/
@@ -173,6 +175,7 @@ nav li:hover{
 .filtre:hover{
     background-color: #0065FC;
     color: white;
+    cursor: pointer;
 }
 
 .round_blue_bck{
@@ -242,7 +245,7 @@ nav li:hover{
     background-color: white;
     margin-bottom: 30px;
     border-radius: 20px;
-    box-shadow: 5px 10px 5px rgb(220,220,220) ;
+    box-shadow: 5px 5px 5px rgb(220,220,220) ;
 }
 
 /*IL Y A UN TRUC A CHANGER LA*/
@@ -312,7 +315,7 @@ nav li:hover{
     height: 145px;
     border-radius: 20px;
     background-color: white;
-    box-shadow: 5px 10px 5px rgb(220,220,220) ;
+    box-shadow: 5px 5px 5px rgb(220,220,220) ;
     margin-bottom: 35px;
 }
 
@@ -380,7 +383,7 @@ nav li:hover{
 .act_big_box{
     width: 22%;
     height:440px;
-    box-shadow: 5px 10px 5px rgb(220,220,220);
+    box-shadow: 5px 5px 5px rgb(220,220,220);
 }
 
 .act_big_box img{
@@ -399,7 +402,7 @@ nav li:hover{
 
 #act_smallbox_large{
     height: 235px;
-    box-shadow: 5px 10px 5px rgb(220,220,220);
+    box-shadow: 5px 5px 5px rgb(220,220,220);
 }
 
 #act_smallbox_large img{
@@ -408,7 +411,7 @@ nav li:hover{
 
 #act_smallbox_small{
     height: 165px;
-    box-shadow: 5px 10px 5px rgb(220,220,220);
+    box-shadow: 5px 5px 5px rgb(220,220,220);
 }
 
 #act_smallbox_small img{
@@ -417,7 +420,7 @@ nav li:hover{
 
 #act_smallbox_medium{
     height: 195px;;
-    box-shadow: 5px 10px 5px rgb(220,220,220);
+    box-shadow: 5px 5px 5px rgb(220,220,220);
 }
 
 #act_smallbox_medium img{
@@ -426,7 +429,7 @@ nav li:hover{
 
 #act_smallbox_medium_plus{
     height:210px;
-    box-shadow: 5px 10px 5px rgb(220,220,220);
+    box-shadow: 5px 5px 5px rgb(220,220,220);
 }
 
 #act_smallbox_medium_plus img{

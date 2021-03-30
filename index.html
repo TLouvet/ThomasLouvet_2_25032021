@@ -28,51 +28,52 @@
         </header>
 
         <div id="centre">
-            <h2 id="main_title"> Trouvez votre hébergement pour des vacances de rêve</h2>
-            <h3>En plein centre ville ou en pleine nature</h3>
+            <section id="global_filtres">
+                <h2 id="main_title"> Trouvez votre hébergement pour des vacances de rêve</h2>
+                <h3>En plein centre ville ou en pleine nature</h3>
 
-            <!--potentiellement les 2 prochaines div peuvent être mises dans un fieldset ?-->
-            <div id="barre_recherche">
-               <span id="location_icon"><i class="fas fa-map-marker-alt"></i></span>
-                <form method="post" action="traitement.php"> <!--Cette partie doit avoir un rapport avec un backend afin de modifier le site en fonction de la sélection visiteur-->
-                    <input type="text" id="ville" name="ville" value="Marseille, France" />
-                </form>
-                <button>Rechercher</button> <!--Je ne pense pas que ça soit le bon outil - utiliser input type submit value rechercher ??-->
-            </div>
+                <!--potentiellement les 2 prochaines div peuvent être mises dans un fieldset ?-->
+                <div id="barre_recherche">
+                <span id="location_icon"><i class="fas fa-map-marker-alt"></i></span>
+                    <form method="post" action="traitement.php"> <!--Cette partie doit avoir un rapport avec un backend afin de modifier le site en fonction de la sélection visiteur-->
+                        <input type="text" id="ville" name="ville" value="Marseille, France" />
+                    </form>
+                    <button>Rechercher</button>
+                </div>
 
             <!--Filtres-->  <!-- <input> <button> ou <a>-->
     
-            <div id ="filtre_wrap"> <!-- pareil ici, il doit y avoir une sélection et un traitement-->
-                <p><span id="filtre_title">Filtres</span></p>
+                <div id ="filtre_wrap"> <!-- pareil ici, il doit y avoir une sélection et un traitement-->
+                    <p><span id="filtre_title">Filtres</span></p>
 
-                <div class="filtre">
+                    <div class="filtre">
                         <span class="round_blue_bck"><i class="fas fa-money-bill-wave"></i></span>
                         <p>Economique</p>
+                    </div>
+
+                    <div class="filtre">
+                        <span class="round_blue_bck"><i class="fas fa-child"></i></span>
+                        <p>Familial</p>
+                    </div>  
+
+                    <div class ="filtre">
+                        <span class="round_blue_bck"><i class="fas fa-heart"></i></span>
+                        <p>Romantique</p>
+                    </div>
+
+                    <div class ="filtre">
+                        <span class="round_blue_bck"><i class="fas fa-dog"></i></span>
+                        <p>Animaux autorisés</p>
+                    </div>
                 </div>
 
-                <div class="filtre">
-                    <span class="round_blue_bck"><i class="fas fa-child"></i></span>
-                    <p>Familial</p>
-                </div>  
-
-                <div class ="filtre">
-                    <span class="round_blue_bck"><i class="fas fa-heart"></i></span>
-                    <p>Romantique</p>
+                <!--Info logements dispo-->
+                <div id="info"> 
+                    <span id="info_round"><i class="fas fa-info"></i></span>
+                    <p>Plus de 500 logements sont disponibles dans cette ville</p>
                 </div>
 
-                <div class ="filtre">
-                    <span class="round_blue_bck"><i class="fas fa-dog"></i></span>
-                    <p>Animaux autorisés</p>
-                </div>
-            </div>
-
-            <!--Info logements dispo-->
-
-            <div id="info"> 
-                <span id="info_round"><i class="fas fa-info"></i></span>
-                <p>Plus de 500 logements sont disponibles dans cette ville</p>
-            </div>
-
+            </section>
             <!--Hébergement-->
             <div id="hebergement">
                 <section id ="hbgtspop">
