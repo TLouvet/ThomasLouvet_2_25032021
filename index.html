@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<!--TODO LIST : Partie filtre : refaire le cours sur les formulaires OC-->
-<!--TODO Réduire la marge de tous les paragraphes/titre à 0 afin de la confier à des divs -->
-<!--TODO Uniformiser la marge top pour les textbox de "Activités" -->
 <html lang="fr">
     <head>
         <meta charset="utf-8"/>
+        <meta name="viewport" content="width-device-width"/>
         <title>Reservia</title>
         <link rel="stylesheet" href="styles.css"/>
         <script src="https://kit.fontawesome.com/e6725f03e5.js" crossorigin="anonymous"></script>
@@ -22,8 +20,8 @@
                 <ul>
                     <li><a href="#hbgtspop">Hébergements</a></li>
                     <li><a href="#act">Activités</a></li>
-                    <li><a href="#"><span id="inscription">S'inscrire</span></a></li>
                 </ul>
+                   <span><a href="#"><span id="inscription">S'inscrire</span></a></span>
             </nav>
         </header>
 
@@ -38,13 +36,14 @@
                     <form method="post" action="traitement.php"> <!--Cette partie doit avoir un rapport avec un backend afin de modifier le site en fonction de la sélection visiteur-->
                         <input type="text" id="ville" name="ville" value="Marseille, France" />
                     </form>
-                    <button>Rechercher</button>
+                    <input type="button" name="bouton_rechercher"  id="bouton_search" value="Rechercher"/>
+                    <button id="mini_bouton_search"><i class="fas fa-search"></i></button>
                 </div>
 
             <!--Filtres-->  <!-- <input> <button> ou <a>-->
     
                 <div id ="filtre_wrap"> <!-- pareil ici, il doit y avoir une sélection et un traitement-->
-                    <p><span id="filtre_title">Filtres</span></p>
+                    <p id="filtre_title">Filtres</p>
 
                     <div class="filtre">
                         <span class="round_blue_bck"><i class="fas fa-money-bill-wave"></i></span>
@@ -189,10 +188,7 @@
                 </section>
 
                 <aside id="mostpop">
-                    <div id="most_pop_title">
-                        <h1>Les plus populaires</h1> 
-                        <span><i class="fas fa-chart-line"></i></span> <!--icone mal positionnée CSS à corriger-->
-                    </div>
+                        <h1 id="most_pop_title">Les plus populaires<span><i class="fas fa-chart-line"></i> </span></h1>
 
                     <div id="mostpop_boxwrap">
                         <div class="mostpop_box">

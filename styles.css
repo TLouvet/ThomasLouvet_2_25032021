@@ -7,32 +7,23 @@ src: url('fonts/Raleway-VariableFont_wght.ttf')
     font-family: 'Raleway Bold';
 src: url('fonts/Raleway-ExtraBold.ttf')
 }
-/* Version PC*/
-
-/*Aussi bien sur laptop que desktop*/
-
-
-header{
-    min-height: 100px;
-}
-
-/* Global, s'applique de la même façon sur toute la page */
-
+/*Paramètres pour toutes les spécifications*/
 *{
     font-family: 'Raleway',sans-serif;
 }
 
-/*aucune liste ne contiendra de puce*/
+body{
+    margin:0;
+}
+
 ul {
     list-style-type: none;
 }
 
-/*Je n'ai que des photos cover qui ont besoin de s'adapter*/
 img{
     object-fit: cover;
 }
 
-/*liens dans la page*/
 a {
     color :black;
     text-decoration: none;
@@ -42,27 +33,17 @@ a:hover{
     color: #0065FC;
 }
 
-body{
-    margin:0;
+p{
+    font-size: 0.9em;
 }
-
-header, #centre{
-    margin: 0;
-    padding-left: 50px; /*high res*/
-    padding-right: 50px;/*hight res*/
-}
-
 
 /* Header */
 header{
-    display: flex;
-    justify-content: space-between;
+    height:135px; /*ok sur PC ET MOBILES*/
 }
 
-#logo{
-    padding: 50px 0 30px 0;
-}
 
+/*adapter ça en version mobile maintenant*/
 nav ul{
     list-style-type: none;
     display: flex;
@@ -70,13 +51,430 @@ nav ul{
     margin-top: 0;
 }
 
-nav li{
-    padding: 50px 20px;
+
+/*Filtres*/
+.filtre{
+    height: 50px;
+    border-radius:30px;
+    border: 3px solid #F2F2F2;
+    border-left: none;
+    margin-right: 20px; /*PC*/
+    display: flex;
+
 }
 
-nav li:hover{
-    border-top: 2px solid #0065FC;
+/*Section où sont présentés les hébergements*/
+#hebergement{
+    display: flex;
+    justify-content: space-between;
+    height:625px;
+    width:100%
 }
+
+#heberg_box{ /*colonne sur tél*/
+    height: 430px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.single_heberg_box{
+    height: 200px; 
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgb(220,220,220) ;
+}
+
+#mostpop{
+    background-color: #F2F2F2;
+}
+
+#mostpop_boxwrap{
+    display: flex;
+    flex-direction: column;
+    margin-top:25px;
+}
+
+#most_pop_title{
+    display: flex;
+    justify-content: space-between;
+    align-items:baseline;
+}
+
+.mostpop_box{
+    display: flex;
+    height: 145px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgb(220,220,220) ;
+    margin-bottom: 30px;
+}
+
+.mostpop_box a{
+    display: flex;
+}
+
+/*Activité général*/
+#act_box_wrap{
+    display: flex;
+    margin-bottom: 60px;
+    justify-content: space-between;
+}
+
+.act_big_box{
+    width: 22%;
+    box-shadow: 5px 5px 5px rgb(220,220,220);
+}
+
+.act_big_box img{
+    height: 385px;
+}
+
+
+.act_small_box_wrap img{
+    border-radius: 20px;
+}
+
+#act_smallbox_large{
+    height: 235px;
+    box-shadow: 3px 5px 5px rgb(220,220,220);
+}
+
+#act_smallbox_large img{
+    height:175px;
+}
+
+#act_smallbox_small{
+    height: 165px;
+    box-shadow: 3px 5px 5px rgb(220,220,220);
+}
+
+#act_smallbox_small img{
+    height:105px;
+}
+
+#act_smallbox_medium{
+    height: 195px;;
+    box-shadow: 3px 5px 5px rgb(220,220,220);
+}
+
+#act_smallbox_medium img{
+    height:135px;
+}
+
+#act_smallbox_medium_plus{
+    height:210px;
+    box-shadow: 3px 5px 5px rgb(220,220,220);
+}
+
+#act_smallbox_medium_plus img{
+    height:150px;
+}
+/*fin des activités*/
+
+footer{
+    background-color: #F2F2F2;
+}
+
+footer ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Spécifications Version PC*/
+@media screen and (min-width: 769px)
+{
+    header, #centre{
+        margin: 0;
+        padding-left: 50px; /*high res*/
+        padding-right: 50px;/*hight res*/
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #logo{
+        padding-top: 50px;
+    }
+
+    nav li{
+        padding: 50px 20px;
+    }
+    /*liseré bleu au dessus d'Hébergement et Activité*/
+    nav li:hover{
+        border-top: 2px solid #0065FC;
+    }
+
+    /*filtre*/
+    #mini_bouton_search{
+        display: none;
+    }
+
+    #hbgtspop{
+        background-color: #F2F2F2;
+        padding: 45px 0 30px 0; /*PC*/
+        border-radius: 20px;
+        width:65.67%;
+    }
+
+    #hbgtspop h1{
+        margin : 0 0 20px 40px;
+    }
+
+    #heberg_box{
+        height: 430px;
+        margin-top:0;
+        margin-bottom:40px;
+        margin-left:40px;
+        margin-right:40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .single_heberg_box{
+        height: 200px; /* PC ET MOBILES*/
+        width: 31.25%;
+        background-color: white;
+        margin-bottom: 30px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px rgb(220,220,220) ;
+    }
+
+    #mostpop{
+        width: 31.3%;
+        border-radius: 20px;
+    }
+
+    #mostpop_boxwrap{
+        margin-left: 35px;
+        margin-right:40px;
+        height:500px;
+    }
+
+    #most_pop_title{
+        margin : 45px 40px 0 35px;
+    }
+
+    .mostpop_box{
+        margin-bottom: 30px;
+    }
+
+    .act_small_box_wrap{
+        width:22%;
+        height:445px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    footer{
+        height:140px;
+        padding: 50px;
+        display: flex;
+    }
+
+    footer ul{
+        padding-right: 225px; /*Probablement pas la bonne solution*/
+    }
+}
+
+/*Spécification version Mobile*/
+@media all and (max-width:768px)
+{
+    #global_filtres{
+        padding-left: 20px;
+    }
+
+    /* Header */
+    header{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #logo{
+        padding-left:20px;
+        padding-top: 30px;
+        padding-bottom:30px;
+    }
+
+    nav {
+        width:100%;
+        padding-bottom: 12px;
+        display: flex;
+    }
+
+    nav:last-child{
+        text-align: right;
+    }
+
+    nav ul{
+        padding-left: 0;
+        width:100%;
+    }
+
+    nav li{
+        width: 50%;
+        margin-top: 0;
+    }
+
+    nav li:first-child{
+        padding-left: 11%;
+        padding-right:10.5%;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #F2F2F2;
+    }
+
+    nav li:last-child{
+        padding-left: 16%;
+        padding-right:16.5%;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #F2F2F2;
+    }
+
+
+    nav li:hover
+    {
+        border-bottom: 2px solid #0065FC;
+    }
+
+    #inscription{
+        position: absolute;
+        right:20px;
+        top: 40px;
+    }
+    
+    #centre
+    {padding-top: 40px;}
+
+    .filtre{
+        margin-bottom: 15px;
+        margin-right:10px;
+    }
+
+    /*Recherche*/
+
+    #bouton_search{
+        display: none;
+    }
+
+    #mini_bouton_search{
+        width:50px;
+        height:50px;
+        background-color: #0065FC;
+        color: white;
+        border: none;
+        border-radius: 10px;
+    }
+
+    #mini_bouton_search:hover{
+        cursor:pointer;
+        background-color: #DEEBFF;
+        color:#0065FC;
+    }
+
+
+    /*Forcer retour ligne après Filtres*/
+    #filtre_title{
+        width:100%;
+    }
+
+    /*Les hébergements les plus populaires sont présentés en premier*/
+    #hebergement{
+        height: 2000px;
+        flex-direction: column-reverse;
+        padding-bottom: 14px;
+    }
+
+    #hbgtspop{
+        padding: 45px 20px 0 20px;
+        height: 1420px;
+    }
+
+    #hbgtspop h1{
+        margin : 0 20px 20px 20px;
+    }
+
+    /*box qui contient toutes les bulles*/
+    #heberg_box{
+        height: 1250px;
+        margin-top:0;
+        margin-bottom: 35px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #mostpop{
+        height:500px;
+        padding: 40px 20px;
+    }
+
+    #mostpop_boxwrap{
+        height:455px;
+    }
+
+    #most_pop_title{
+        margin : 0;
+    }
+
+    .mostpop_box{
+        margin-bottom: 10px;
+    }
+
+    /*Activités low-res*/
+    #act{
+        padding-left: 20px;
+        padding-right : 20px;
+        padding-bottom: 25px;
+    }
+
+    #act h2{
+        margin-bottom:35px;
+        margin-top:30px;
+    }
+
+    #act_box_wrap{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    #act_box_wrap div{
+        width:100%;
+    }
+
+    .act_big_box{
+        height:190px;
+        margin-bottom: 25px;
+    }
+
+    .act_small_box_wrap #act_smallbox_medium,  #act_smallbox_small, #act_smallbox_large, #act_smallbox_medium_plus{
+        height: 190px;
+        margin-bottom: 25px;
+    }
+
+    #act_box_wrap img{
+        height:130px; /*toutes les images font la même taille sur version mobile, autant utiliser la div au dessus*/
+    }
+    /*Footer Low res*/
+    footer{
+        padding-bottom:45px;
+        padding-left:20px;
+        padding-top: 45px;
+    }
+
+    footer ul{
+        margin: 0;
+    }
+
+    .footer_sous_liste{} /*A FINIR BIP BIP*/
+}
+
+
+
 
 #inscription{
     font-family: 'Raleway Bold';
@@ -108,7 +506,7 @@ nav li:hover{
     padding-top: 15px;  
 }
 
-#barre_recherche input{
+form input{
     font-weight: bold;
     padding-left: 15px;
     height: 46px;
@@ -121,7 +519,7 @@ nav li:hover{
     font-size: 1em;
 }
 
-#barre_recherche button{ 
+#bouton_search{ 
     color:white;
     background-color: #0065FC;
     border-radius: 0 10px 10px 0;
@@ -129,11 +527,12 @@ nav li:hover{
     font-weight: bold;
     padding-left:20px;
     padding-right:15px;
-
+    height: 50px;
     font-family: 'Raleway Bold', sans-serif;
 }
 
-#barre_recherche button:hover{
+/*GLOBAL*/
+#bouton_search:hover{
     background-color: #DEEBFF;
     color:#0065FC;
     cursor: pointer;
@@ -143,29 +542,19 @@ nav li:hover{
 #filtre_wrap{
     display: flex;
     font-weight:bold;
+    flex-wrap: wrap;
     margin-bottom: 40px;
-    font-size: 1em;
 }
 
 #filtre_title{
     margin-right:30px;
     font-family: 'Raleway Bold', sans-serif;
-
 }
 
 .filtre p{
     font-family: 'Raleway Bold', sans-serif;
 }
 
-.filtre{
-    height: 50px;
-    border-radius:30px;
-    border: 3px solid #F2F2F2;
-    border-left: none;
-    margin-right: 20px; /*PC*/
-    display: flex;
-
-}
 
 .filtre a{
     display: flex;
@@ -218,44 +607,8 @@ nav li:hover{
     margin-right: 10px;
     color: #0065FC;
 }
-/*Section où sont présentés les hébergements*/
-#hebergement{
-    display: flex;
-    justify-content: space-between;
-    height:625px;
-    width:100%
-}
 
-#hbgtspop{
-    background-color: #F2F2F2;
-    padding: 45px 40px 30px 40px; /*PC*/
-    border-radius: 20px;
-    width:800px;
-
-}
-
-#hbgtspop h1{
-    margin-top:0;
-    margin-bottom: 20px;
-}
-
-#heberg_box{
-    height: 430px;
-    margin-top:0;
-    margin-bottom:40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.single_heberg_box{
-    height: 200px; /* PC ET MOBILES*/
-    width: 250px;/* PC - 320 sur mobiles*/
-    background-color: white;
-    margin-bottom: 30px;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px rgb(220,220,220) ;
-}
+/****/
 
 /*IL Y A UN TRUC A CHANGER LA*/
 .img_hbg{
@@ -279,11 +632,12 @@ nav li:hover{
     height: 70px;
 }
 
-.text_heberg_box p, h4{ /*h3 à enlever potentiellement car inutilisé*/
+.text_heberg_box p, h4{ 
     margin-top: 0;
     margin-bottom: 5px;
 }
 
+/*Ca c'est global donc ça ne bouge pas */
 .texte_gras{
     font-weight: bold;
 }
@@ -296,44 +650,7 @@ nav li:hover{
     color: rgb(220,220,220);
 }
 
-/*Partie Droite*/
-#mostpop{
-    padding: 45px 40px 35px 40px;
-    width: 340px;
-    background-color: #F2F2F2;
-    border-radius: 20px;
-}
-
-#most_pop_title h1{
-    margin: 0;
-}
-
-#most_pop_title{
-    display: flex;
-    justify-content: space-between;
-    align-items:baseline;
-}
-
-
-#mostpop_boxwrap{
-    display: flex;
-    flex-direction: column;
-    margin-top:25px;
-    height:500px;
-}
-
-.mostpop_box{
-    display: flex;
-    height: 145px;
-    border-radius: 20px;
-    background-color: white;
-    box-shadow: 5px 5px 5px rgb(220,220,220) ;
-    margin-bottom: 30px;
-}
-
-.mostpop_box a{
-    display: flex;
-}
+/*Partie Les plus populaire - pas besoin de modification*/
 
 .mostpop_img{
     height:135px;
@@ -346,7 +663,7 @@ nav li:hover{
 .mostpop_img img{
     width:100%;
     height: 100%;
-    border-radius: 20px 0 0 20px;
+    border-radius: 17px 0 0 17px;
 }
 
 .mostpop_box_text{
@@ -382,90 +699,15 @@ nav li:hover{
     padding-top: 20px;
     padding-left: 20px;
 }
-#act_box_wrap{
-    display: flex;
-    margin-bottom: 60px;
-    justify-content: space-between;
-}
 
-.act_small_box_wrap{
-    width:22%;
-    height:445px;
-}
-
-.act_big_box{
-    width: 22%;
-    box-shadow: 5px 5px 5px rgb(220,220,220);
-}
-
-.act_big_box img{
-    height: 385px;
-}
-
-.act_small_box_wrap{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.act_small_box_wrap img{
-    border-radius: 20px;
-}
-
-#act_smallbox_large{
-    height: 235px;
-    box-shadow: 5px 5px 5px rgb(220,220,220);
-}
-
-#act_smallbox_large img{
-    height:175px;
-}
-
-#act_smallbox_small{
-    height: 165px;
-    box-shadow: 5px 5px 5px rgb(220,220,220);
-}
-
-#act_smallbox_small img{
-    height:105px;
-}
-
-#act_smallbox_medium{
-    height: 195px;;
-    box-shadow: 5px 5px 5px rgb(220,220,220);
-}
-
-#act_smallbox_medium img{
-    height:135px;
-}
-
-#act_smallbox_medium_plus{
-    height:210px;
-    box-shadow: 5px 5px 5px rgb(220,220,220);
-}
-
-#act_smallbox_medium_plus img{
-    height:150px;
-}
+/*tout ça doit être modifié en responsive car spécifique à la version PC*/
 
 
 /*Footer*/
-footer{
-    height:140px;
-    padding: 50px;
-    background-color: #F2F2F2;
-    display: flex;
-}
 
 footer h3{
     margin-top:0;
     margin-bottom:25px;
-}
-
-footer ul{
-    list-style-type: none;
-    padding-left: 0;
-    padding-right: 225px; /*Probablement pas la bonne solution*/
 }
 
 footer li{
