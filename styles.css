@@ -52,7 +52,32 @@ nav ul{
 }
 
 
+#inscription a{
+    font-family: 'Raleway Bold';
+    color: #0065FC;
+}
+
+/*recherche*/
+#barre_recherche{
+    display: flex;
+    height: 50px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
 /*Filtres*/
+#filtre_wrap{
+    display: flex;
+    font-weight:bold;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.filtre p{
+    font-size: 1em;
+}
+
 .filtre{
     height: 50px;
     border-radius:30px;
@@ -83,7 +108,11 @@ nav ul{
     height: 200px; 
     background-color: white;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px rgb(220,220,220) ;
+    box-shadow: 0 0 15px rgb(220,220,220);
+}
+
+#show_more{
+    font-weight: bold;
 }
 
 #mostpop{
@@ -107,7 +136,7 @@ nav ul{
     height: 145px;
     border-radius: 20px;
     background-color: white;
-    box-shadow: 5px 5px 5px rgb(220,220,220) ;
+    box-shadow: 0 0 15px rgb(220,220,220);
     margin-bottom: 30px;
 }
 
@@ -124,7 +153,7 @@ nav ul{
 
 .act_big_box{
     width: 22%;
-    box-shadow: 5px 5px 5px rgb(220,220,220);
+    box-shadow: 0 0 15px rgb(220,220,220);
 }
 
 .act_big_box img{
@@ -138,7 +167,7 @@ nav ul{
 
 #act_smallbox_large{
     height: 235px;
-    box-shadow: 3px 5px 5px rgb(220,220,220);
+    box-shadow: 0 0 15px rgb(220,220,220);
 }
 
 #act_smallbox_large img{
@@ -147,7 +176,7 @@ nav ul{
 
 #act_smallbox_small{
     height: 165px;
-    box-shadow: 3px 5px 5px rgb(220,220,220);
+    box-shadow: 0 0 15px rgb(220,220,220);
 }
 
 #act_smallbox_small img{
@@ -156,7 +185,7 @@ nav ul{
 
 #act_smallbox_medium{
     height: 195px;;
-    box-shadow: 3px 5px 5px rgb(220,220,220);
+    box-shadow: 0 0 15px rgb(220,220,220);
 }
 
 #act_smallbox_medium img{
@@ -165,7 +194,7 @@ nav ul{
 
 #act_smallbox_medium_plus{
     height:210px;
-    box-shadow: 3px 5px 5px rgb(220,220,220);
+    box-shadow: 0 0 15px rgb(220,220,220);
 }
 
 #act_smallbox_medium_plus img{
@@ -183,7 +212,7 @@ footer ul{
 }
 
 /* Spécifications Version PC*/
-@media screen and (min-width: 769px)
+@media screen and (min-width: 783px)
 {
     header, #centre{
         margin: 0;
@@ -200,14 +229,18 @@ footer ul{
         padding-top: 50px;
     }
 
-    nav li{
+    nav{
+        display: flex  ;
+    }
+
+    nav li, #inscription{
         padding: 50px 20px;
     }
     /*liseré bleu au dessus d'Hébergement et Activité*/
     nav li:hover{
         border-top: 2px solid #0065FC;
     }
-
+    
     /*filtre*/
     #mini_bouton_search{
         display: none;
@@ -241,8 +274,11 @@ footer ul{
         background-color: white;
         margin-bottom: 30px;
         border-radius: 20px;
-        box-shadow: 5px 5px 5px rgb(220,220,220) ;
+        box-shadow: 0 0 15px rgb(220,220,220);
     }
+
+    #show_more{
+        margin-left: 40px;}
 
     #mostpop{
         width: 31.3%;
@@ -283,7 +319,7 @@ footer ul{
 }
 
 /*Spécification version Mobile*/
-@media all and (max-width:768px)
+@media all and (max-width:782px)
 {
     #global_filtres{
         padding-left: 20px;
@@ -322,15 +358,13 @@ footer ul{
     }
 
     nav li:first-child{
-        padding-left: 11%;
-        padding-right:10.5%;
+        text-align: center;
         padding-bottom: 12px;
         border-bottom: 2px solid #F2F2F2;
     }
 
     nav li:last-child{
-        padding-left: 16%;
-        padding-right:16.5%;
+        text-align: center;
         padding-bottom: 12px;
         border-bottom: 2px solid #F2F2F2;
     }
@@ -350,12 +384,19 @@ footer ul{
     #centre
     {padding-top: 40px;}
 
+
+    #filtre_wrap{
+        margin-bottom: 15px;
+    }
     .filtre{
         margin-bottom: 15px;
         margin-right:10px;
     }
 
     /*Recherche*/
+    #barre_recherche{
+        margin-bottom: 20px;
+    }
 
     #bouton_search{
         display: none;
@@ -382,6 +423,12 @@ footer ul{
         width:100%;
     }
 
+    #info{padding-right: 25px;}
+
+    #info_round{
+        height: 50%;
+    }
+
     /*Les hébergements les plus populaires sont présentés en premier*/
     #hebergement{
         height: 2000px;
@@ -405,6 +452,10 @@ footer ul{
         margin-bottom: 35px;
         display: flex;
         flex-direction: column;
+    }
+
+    .single_heberg_box{
+        box-shadow: 0 0 15px rgb(220,220,220);
     }
 
     #mostpop{
@@ -461,7 +512,7 @@ footer ul{
     }
     /*Footer Low res*/
     footer{
-        padding-bottom:45px;
+        padding-bottom:1px;
         padding-left:20px;
         padding-top: 45px;
     }
@@ -470,16 +521,12 @@ footer ul{
         margin: 0;
     }
 
-    .footer_sous_liste{} /*A FINIR BIP BIP*/
+    .footer_sous_liste{
+        margin-bottom: 50px;
+    } /*A FINIR BIP BIP*/
 }
 
 
-
-
-#inscription{
-    font-family: 'Raleway Bold';
-    color: #0065FC;
-}
 
 /*Centre*/
 
@@ -491,12 +538,6 @@ footer ul{
 
 
 /*Recherche par ville */
-#barre_recherche{
-    display: flex;
-    height: 50px;
-    margin-bottom: 30px;
-    margin-top: 15px;
-}
 
 #location_icon{
     padding-left:20px;
@@ -539,12 +580,6 @@ form input{
 }
 
 /*Recherche par filtre*/
-#filtre_wrap{
-    display: flex;
-    font-weight:bold;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-}
 
 #filtre_title{
     margin-right:30px;
@@ -571,7 +606,6 @@ form input{
     height:50px;
     background-color: #DEEBFF;
     color: #0065FC;
-    scale: 2.5;
     border-radius: 25px;
 
     /*aligne l'icone à l'intérieur*/
@@ -621,8 +655,7 @@ form input{
 .single_heberg_box img{
     height:115px;
     width:95%; /*Pas trouvé autre mais ce n'est pas la bonne façon de faire*/
-    margin: auto;
-    border-radius: 20px 20px 0 0;
+    border-radius: 15px 15px 0 0;
 }
 /*JUSTQUE LA*/
 
