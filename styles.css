@@ -97,7 +97,6 @@ nav ul{
 }
 
 #heberg_box{ /*colonne sur tél*/
-    height: 430px;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
@@ -142,6 +141,14 @@ nav ul{
 
 .mostpop_box a{
     display: flex;
+}
+
+.mostpop_img{
+    height:135px;
+    margin:0;
+    padding: 5px 0 5px 5px;
+    min-width:40%;
+    width:40%;
 }
 
 /*Activité général*/
@@ -212,7 +219,7 @@ footer ul{
 }
 
 /* Spécifications Version PC*/
-@media screen and (min-width: 783px)
+@media screen and (min-width: 1040px)
 {
     header, #centre{
         margin: 0;
@@ -318,8 +325,198 @@ footer ul{
     }
 }
 
-/*Spécification version Mobile*/
-@media all and (max-width:782px)
+/*Spec tablette jusqu'à 1024px */
+
+/*Spécifications Tablette jusqu'à 768px*/
+@media all and (min-width:567px) and (max-width: 1039px) /*pour les basoins du test*/
+{
+    /*toutes les box sont plus grandes de 20px que sur mobile, les hébergements sont présentés par 2, header fait sur base mobile, footer légèrement modifié*/
+        /* Header - Même header que sur la version mobile */
+        header{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    
+        #logo{
+            padding-left:3.5%;
+            padding-top: 30px;
+            padding-bottom:30px;
+        }
+    
+        nav {
+            width:100%;
+            padding-bottom: 12px;
+            display: flex;
+        }
+    
+        nav:last-child{
+            text-align: right;
+        }
+    
+        nav ul{
+            padding-left: 0;
+            width:100%;
+        }
+    
+        nav li{
+            width: 50%;
+            margin-top: 0;
+        }
+    
+        nav li:first-child{
+            text-align: center;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #F2F2F2;
+        }
+    
+        nav li:last-child{
+            text-align: center;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #F2F2F2;
+        }
+    
+    
+        nav li:hover
+        {
+            border-bottom: 2px solid #0065FC;
+        }
+    
+        #inscription{
+            position: absolute;
+            right:4.5%;
+            top: 40px;
+        }
+
+        /* Centre <768px*/
+        #centre{
+            padding-top: 40px;
+        }
+        /*Barre recherche <768px */
+        #barre_recherche{
+            margin-bottom: 20px;
+        }
+    
+        #bouton_search{
+            display: none;
+        }
+    
+        #mini_bouton_search{
+            width:50px;
+            height:50px;
+            background-color: #0065FC;
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+    
+        #mini_bouton_search:hover{
+            cursor:pointer;
+            background-color: #DEEBFF;
+            color:#0065FC;
+        }
+
+        /*Filtres <768px */
+        #global_filtres{
+            padding-left: 3.5%;
+        }
+        #filtre_wrap{
+            margin-bottom: 15px;
+        }
+
+        #filtre_title{
+            width:100%;
+        }
+
+        .filtre{
+            margin-bottom: 15px;
+            margin-right:10px;
+        }
+
+        /*Info - laisser comme version plus grand taille, ça ne prendra pas toute la ligne*/
+
+        /*Hébergement <768px*/
+        #hebergement{
+            height: 1350px;
+            flex-direction: column-reverse;
+            padding-bottom: 1px;
+        }
+
+        #mostpop, #hbgtspop{
+            padding-left: 3.5%;
+            padding-right:4%;
+            padding-bottom: 20px;
+        }
+
+        .mostpop_box{
+            margin-bottom: 15px;
+            height: 165px;
+        }
+
+        .mostpop_img{
+            height:155px;            
+        }
+
+        #hbgtspop{
+            flex-wrap: wrap;
+        }
+
+        .single_heberg_box{
+            width: 47%;
+            margin-bottom: 15px;
+        }
+
+
+        /*actµ/
+           /*Activités low-res*/
+    #act{
+        padding-left: 20px;
+        padding-right : 20px;
+        padding-bottom: 25px;
+    }
+
+    #act h2{
+        margin-bottom:35px;
+        margin-top:30px;
+    }
+
+    #act_box_wrap{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    #act_box_wrap div{
+        width:100%;
+    }
+
+    .act_big_box{
+        height:210px;
+        margin-bottom: 25px;
+    }
+
+    .act_small_box_wrap #act_smallbox_medium,  #act_smallbox_small, #act_smallbox_large, #act_smallbox_medium_plus{
+        height: 210px;
+        margin-bottom: 25px;
+    }
+
+    #act_box_wrap img{
+        height:150px; /*toutes les images font la même taille sur version mobile, autant utiliser la div au dessus*/
+    }
+
+    /*Footer Tablette*/
+
+    footer{
+        padding-top: 30px;
+        padding-bottom: 10px;
+        padding-left: 3.5%;
+        padding-right:4%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/*Spécification version Mobile et low tablettes jusqu'à 550px*/
+@media all and (max-width:566px)
 {
     #global_filtres{
         padding-left: 20px;
@@ -381,17 +578,9 @@ footer ul{
         top: 40px;
     }
     
+    /**/
     #centre
     {padding-top: 40px;}
-
-
-    #filtre_wrap{
-        margin-bottom: 15px;
-    }
-    .filtre{
-        margin-bottom: 15px;
-        margin-right:10px;
-    }
 
     /*Recherche*/
     #barre_recherche{
@@ -418,11 +607,21 @@ footer ul{
     }
 
 
-    /*Forcer retour ligne après Filtres*/
+    /* Filtres <480px*/
     #filtre_title{
         width:100%;
     }
 
+    #filtre_wrap{
+        margin-bottom: 15px;
+    }
+    .filtre{
+        margin-bottom: 15px;
+        margin-right:10px;
+    }
+
+
+    /* Info <480px */
     #info{padding-right: 25px;}
 
     #info_round{
@@ -629,11 +828,11 @@ form input{
 }
 
 #info p{
-    margin:0; /*Global*/
+    margin:0; 
     padding-top: 2px;
 }
 
-#info_round{  /*Border radius ???*/
+#info_round{  
     border: 2px solid #F2F2F2;
     border-radius: 20px;
     padding: 1px 6px;
@@ -685,13 +884,7 @@ form input{
 
 /*Partie Les plus populaire - pas besoin de modification*/
 
-.mostpop_img{
-    height:135px;
-    margin:0;
-    padding: 5px 0 5px 5px;
-    min-width:40%;
-    width:40%;
-}
+
 
 .mostpop_img img{
     width:100%;
@@ -732,9 +925,6 @@ form input{
     padding-top: 20px;
     padding-left: 20px;
 }
-
-/*tout ça doit être modifié en responsive car spécifique à la version PC*/
-
 
 /*Footer*/
 
