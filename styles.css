@@ -141,6 +141,7 @@ nav ul{
 
 .mostpop_box a{
     display: flex;
+    width: 100%;
 }
 
 .mostpop_img{
@@ -219,7 +220,7 @@ footer ul{
 }
 
 /* Spécifications Version PC*/
-@media screen and (min-width: 1040px)
+@media screen and (min-width: 1345px)
 {
     header, #centre{
         margin: 0;
@@ -325,211 +326,18 @@ footer ul{
     }
 }
 
+/******* TABLETTE **********************/
 /*Spec tablette jusqu'à 1024px */
-
-/*Spécifications Tablette jusqu'à 768px*/
-@media all and (min-width:567px) and (max-width: 1039px) /*pour les basoins du test*/
+@media all and (max-width:1344px)
 {
-    /*toutes les box sont plus grandes de 20px que sur mobile, les hébergements sont présentés par 2, header fait sur base mobile, footer légèrement modifié*/
-        /* Header - Même header que sur la version mobile */
-        header{
-            display: flex;
-            flex-wrap: wrap;
-        }
-    
-        #logo{
-            padding-left:3.5%;
-            padding-top: 30px;
-            padding-bottom:30px;
-        }
-    
-        nav {
-            width:100%;
-            padding-bottom: 12px;
-            display: flex;
-        }
-    
-        nav:last-child{
-            text-align: right;
-        }
-    
-        nav ul{
-            padding-left: 0;
-            width:100%;
-        }
-    
-        nav li{
-            width: 50%;
-            margin-top: 0;
-        }
-    
-        nav li:first-child{
-            text-align: center;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #F2F2F2;
-        }
-    
-        nav li:last-child{
-            text-align: center;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #F2F2F2;
-        }
-    
-    
-        nav li:hover
-        {
-            border-bottom: 2px solid #0065FC;
-        }
-    
-        #inscription{
-            position: absolute;
-            right:4.5%;
-            top: 40px;
-        }
-
-        /* Centre <768px*/
-        #centre{
-            padding-top: 40px;
-        }
-        /*Barre recherche <768px */
-        #barre_recherche{
-            margin-bottom: 20px;
-        }
-    
-        #bouton_search{
-            display: none;
-        }
-    
-        #mini_bouton_search{
-            width:50px;
-            height:50px;
-            background-color: #0065FC;
-            color: white;
-            border: none;
-            border-radius: 10px;
-        }
-    
-        #mini_bouton_search:hover{
-            cursor:pointer;
-            background-color: #DEEBFF;
-            color:#0065FC;
-        }
-
-        /*Filtres <768px */
-        #global_filtres{
-            padding-left: 3.5%;
-        }
-        #filtre_wrap{
-            margin-bottom: 15px;
-        }
-
-        #filtre_title{
-            width:100%;
-        }
-
-        .filtre{
-            margin-bottom: 15px;
-            margin-right:10px;
-        }
-
-        /*Info - laisser comme version plus grand taille, ça ne prendra pas toute la ligne*/
-
-        /*Hébergement <768px*/
-        #hebergement{
-            height: 1350px;
-            flex-direction: column-reverse;
-            padding-bottom: 1px;
-        }
-
-        #mostpop, #hbgtspop{
-            padding-left: 3.5%;
-            padding-right:4%;
-            padding-bottom: 20px;
-        }
-
-        .mostpop_box{
-            margin-bottom: 15px;
-            height: 165px;
-        }
-
-        .mostpop_img{
-            height:155px;            
-        }
-
-        #hbgtspop{
-            flex-wrap: wrap;
-        }
-
-        .single_heberg_box{
-            width: 47%;
-            margin-bottom: 15px;
-        }
-
-
-        /*actµ/
-           /*Activités low-res*/
-    #act{
-        padding-left: 20px;
-        padding-right : 20px;
-        padding-bottom: 25px;
-    }
-
-    #act h2{
-        margin-bottom:35px;
-        margin-top:30px;
-    }
-
-    #act_box_wrap{
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 0;
-    }
-
-    #act_box_wrap div{
-        width:100%;
-    }
-
-    .act_big_box{
-        height:210px;
-        margin-bottom: 25px;
-    }
-
-    .act_small_box_wrap #act_smallbox_medium,  #act_smallbox_small, #act_smallbox_large, #act_smallbox_medium_plus{
-        height: 210px;
-        margin-bottom: 25px;
-    }
-
-    #act_box_wrap img{
-        height:150px; /*toutes les images font la même taille sur version mobile, autant utiliser la div au dessus*/
-    }
-
-    /*Footer Tablette*/
-
-    footer{
-        padding-top: 30px;
-        padding-bottom: 10px;
-        padding-left: 3.5%;
-        padding-right:4%;
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
-/*Spécification version Mobile et low tablettes jusqu'à 550px*/
-@media all and (max-width:566px)
-{
-    #global_filtres{
-        padding-left: 20px;
-    }
-
-    /* Header */
+    /*Header */
     header{
         display: flex;
         flex-wrap: wrap;
     }
 
     #logo{
-        padding-left:20px;
+        padding-left:3.5%;
         padding-top: 30px;
         padding-bottom:30px;
     }
@@ -566,7 +374,6 @@ footer ul{
         border-bottom: 2px solid #F2F2F2;
     }
 
-
     nav li:hover
     {
         border-bottom: 2px solid #0065FC;
@@ -574,15 +381,16 @@ footer ul{
 
     #inscription{
         position: absolute;
-        right:20px;
+        right:4.5%;
         top: 40px;
     }
-    
-    /**/
-    #centre
-    {padding-top: 40px;}
 
-    /*Recherche*/
+    /***CENTRE ***/
+    #centre{
+        padding-top: 40px;
+    }
+
+    /***RECHERCHER**/
     #barre_recherche{
         margin-bottom: 20px;
     }
@@ -590,7 +398,7 @@ footer ul{
     #bouton_search{
         display: none;
     }
-
+ 
     #mini_bouton_search{
         width:50px;
         height:50px;
@@ -607,9 +415,200 @@ footer ul{
     }
 
 
-    /* Filtres <480px*/
+    /*FILTRES*/
+
+    #global_filtres{
+        padding-left: 3.5%;
+    }
+    #filtre_wrap{
+        margin-bottom: 15px;
+    }
+
+    .filtre{
+        margin-bottom: 15px;
+        margin-right:10px;
+    }
+
+    /*INFOS*/
+
+
+    /*** HEBERGEMENT***/
+    #hebergement{
+        height: 1200px;
+        flex-direction: column-reverse;
+        padding-bottom: 1px;
+    }
+
+    #mostpop, #hbgtspop{
+        padding-left: 3.5%;
+        padding-right:3.5%;
+        padding-bottom: 20px;
+    }
+
+    .mostpop_box{
+        margin-bottom: 15px;
+        height: 165px;
+    }
+
+    .mostpop_img{
+        height:155px;            
+    }
+
+    #hbgtspop{
+        flex-wrap: wrap;
+    }
+
+    .single_heberg_box{ /* A TESTER ET EVENTUELLEMENT MODIFIER*/
+        width: 31%;
+        margin-bottom: 15px;
+    } 
+
+    /*ACTIVITES*/
+
+    #act{
+        padding-left: 3.5%;
+        padding-right : 3.5%;
+        padding-bottom: 25px;
+    }
+
+
+    #act h2{
+        margin-bottom:35px;
+        margin-top:30px;
+    }
+
+    #act_box_wrap{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+
+    .act_big_box, .act_small_box_wrap{
+        width:48%;
+        margin-bottom: 20px;
+    }
+
+    #act_smallbox_medium,  #act_smallbox_small, #act_smallbox_large, #act_smallbox_medium_plus{
+        width: 100%;
+    }
+
+
+    .act_big_box{
+        height:445px;
+        margin-bottom: 25px;
+    }
+
+    .act_small_box_wrap #act_smallbox_medium,  #act_smallbox_small, #act_smallbox_large, #act_smallbox_medium_plus{
+        height: 210px;
+        margin-bottom: 25px;
+    }
+
+    .act_small_box_wrap #act_smallbox_medium img,  #act_smallbox_small img, #act_smallbox_large img, #act_smallbox_medium_plus img{
+        height: 150px;
+    }
+
+
+    /**FOOTER TABLETTE*/
+
+    footer{
+        padding-top: 30px;
+        padding-bottom: 10px;
+        padding-left: 3.5%;
+        padding-right:4%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media all and (min-width: 1294px) and (max-width: 1344px){
+    /*reorganiser rapidement le mostpop*:margin-bottom*/
+
+    #hebergement{
+        height:855px;
+    }
+    #mostpop_boxwrap{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .mostpop_box{
+        width: 32%;
+    }
+
+    .mostpop_box h4{
+        width: 90%;
+    }
+
+}
+
+@media all and (max-width: 1039px) {
+    /* Les filtres se réorganisent à partir de 1024px*/  
+    
     #filtre_title{
         width:100%;
+    }
+  
+}
+
+/*Spécifications Tablette jusqu'à 768px*/
+@media all and (min-width:567px) and (max-width: 814px) /*pour les basoins du test*/
+{
+    /*Hébergement <768px*/
+    #hebergement{
+        height: 1400px;
+    }
+
+    .single_heberg_box{
+        width: 47%;
+        margin-bottom: 15px;
+    }
+     /*Activités low-res*/
+    #act_box_wrap{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    #act_box_wrap div{
+        width:100%;
+    }
+
+    .act_big_box{
+        height:210px;
+        margin-bottom: 25px;
+    }
+
+    .act_small_box_wrap #act_smallbox_medium,  #act_smallbox_small, #act_smallbox_large, #act_smallbox_medium_plus{
+        height: 210px;
+        margin-bottom: 25px;
+    }
+
+    #act_box_wrap img{
+        height:150px; /*toutes les images font la même taille sur version mobile, autant utiliser la div au dessus*/
+    }
+
+}
+
+/*Spécification petites rés*/
+@media all and (max-width:566px)
+{
+    /* Header - spécifique version mobile*/
+    #logo{
+        padding-left:20px;
+    }
+
+    #inscription{
+        position: absolute;
+        right:20px;
+        top: 40px;
+    } 
+    /*CENTRE - spécifique mobile*/
+
+    /*Recherche*/
+
+    /* Filtres <480px*/
+
+    #global_filtres{
+        padding-left: 20px;
     }
 
     #filtre_wrap{
@@ -630,7 +629,7 @@ footer ul{
 
     /*Les hébergements les plus populaires sont présentés en premier*/
     #hebergement{
-        height: 2000px;
+        height: 2040px;
         flex-direction: column-reverse;
         padding-bottom: 14px;
     }
@@ -644,17 +643,18 @@ footer ul{
         margin : 0 20px 20px 20px;
     }
 
-    /*box qui contient toutes les bulles*/
+    /*box qui contient toutes les bulles CA MERDE ICI ZZZZ*/
     #heberg_box{
-        height: 1250px;
+        height: 1300px;
         margin-top:0;
         margin-bottom: 35px;
-        display: flex;
         flex-direction: column;
+        justify-content: stretch;
     }
 
     .single_heberg_box{
         box-shadow: 0 0 15px rgb(220,220,220);
+        width:100%;
     }
 
     #mostpop{
@@ -672,14 +672,13 @@ footer ul{
 
     .mostpop_box{
         margin-bottom: 10px;
+        height:145px;
     }
 
-    /*Activités low-res*/
-    #act{
-        padding-left: 20px;
-        padding-right : 20px;
-        padding-bottom: 25px;
+    .mostpop_img{
+        height: 135px;
     }
+    /*Activités low-res*/
 
     #act h2{
         margin-bottom:35px;
@@ -725,16 +724,13 @@ footer ul{
     } /*A FINIR BIP BIP*/
 }
 
-
-
-/*Centre*/
+/*Centre GLOBAL*/
 
 #main_title{
     font-family: 'Raleway Bold', sans-serif;
     margin-bottom: 10px;
     margin-top: 0;
 }
-
 
 /*Recherche par ville */
 
@@ -883,8 +879,6 @@ form input{
 }
 
 /*Partie Les plus populaire - pas besoin de modification*/
-
-
 
 .mostpop_img img{
     width:100%;
