@@ -34,6 +34,10 @@ a:hover{
 }
 
 p{
+    font-size: 0.8em;
+}
+
+h3, h4{
     font-size: 0.9em;
 }
 
@@ -112,6 +116,7 @@ nav ul{
 
 #show_more{
     font-weight: bold;
+    font-size:0.9em;
 }
 
 #mostpop{
@@ -220,7 +225,7 @@ footer ul{
 }
 
 /* Spécifications Version PC*/
-@media screen and (min-width: 1345px)
+@media screen and (min-width: 1216px)
 {
     header, #centre{
         margin: 0;
@@ -289,13 +294,13 @@ footer ul{
         margin-left: 40px;}
 
     #mostpop{
-        width: 31.3%;
+        width: 33%;
         border-radius: 20px;
     }
 
     #mostpop_boxwrap{
-        margin-left: 35px;
-        margin-right:40px;
+        margin-left: 8%;
+        margin-right:9%;
         height:500px;
     }
 
@@ -322,13 +327,13 @@ footer ul{
     }
 
     footer ul{
-        padding-right: 225px; /*Probablement pas la bonne solution*/
+        padding-right: 200px; /*Probablement pas la bonne solution*/
     }
 }
 
 /******* TABLETTE **********************/
-/*Spec tablette jusqu'à 1024px */
-@media all and (max-width:1344px)
+/*Spec jusqu'à 1200px */
+@media all and (max-width:1215px)
 {
     /*Header */
     header{
@@ -478,7 +483,6 @@ footer ul{
     }
 
     #act_box_wrap{
-        display: flex;
         flex-wrap: wrap;
         margin-bottom: 0;
     }
@@ -520,27 +524,6 @@ footer ul{
     }
 }
 
-@media all and (min-width: 1294px) and (max-width: 1344px){
-    /*reorganiser rapidement le mostpop*:margin-bottom*/
-
-    #hebergement{
-        height:855px;
-    }
-    #mostpop_boxwrap{
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .mostpop_box{
-        width: 32%;
-    }
-
-    .mostpop_box h4{
-        width: 90%;
-    }
-
-}
-
 @media all and (max-width: 1039px) {
     /* Les filtres se réorganisent à partir de 1024px*/  
     
@@ -551,7 +534,7 @@ footer ul{
 }
 
 /*Spécifications Tablette jusqu'à 768px*/
-@media all and (min-width:567px) and (max-width: 814px) /*pour les basoins du test*/
+@media all and (min-width:615px) and (max-width: 814px) /*pour les basoins du test*/
 {
     /*Hébergement <768px*/
     #hebergement{
@@ -562,34 +545,10 @@ footer ul{
         width: 47%;
         margin-bottom: 15px;
     }
-     /*Activités low-res*/
-    #act_box_wrap{
-        flex-direction: column;
-        margin-bottom: 0;
-    }
-
-    #act_box_wrap div{
-        width:100%;
-    }
-
-    .act_big_box{
-        height:210px;
-        margin-bottom: 25px;
-    }
-
-    .act_small_box_wrap #act_smallbox_medium,  #act_smallbox_small, #act_smallbox_large, #act_smallbox_medium_plus{
-        height: 210px;
-        margin-bottom: 25px;
-    }
-
-    #act_box_wrap img{
-        height:150px; /*toutes les images font la même taille sur version mobile, autant utiliser la div au dessus*/
-    }
-
 }
 
 /*Spécification petites rés*/
-@media all and (max-width:566px)
+@media all and (max-width:614px)
 {
     /* Header - spécifique version mobile*/
     #logo{
@@ -605,7 +564,7 @@ footer ul{
 
     /*Recherche*/
 
-    /* Filtres <480px*/
+    /* Filtres*/
 
     #global_filtres{
         padding-left: 20px;
@@ -713,6 +672,7 @@ footer ul{
         padding-bottom:1px;
         padding-left:20px;
         padding-top: 45px;
+        flex-direction: column;
     }
 
     footer ul{
@@ -746,11 +706,12 @@ form input{
     font-weight: bold;
     padding-left: 15px;
     height: 46px;
+    width: 230px;
     border-left: none;
     border-right: none;
     border-bottom: 1px #F2F2F2 solid;
     border-top: 1px #F2F2F2 solid;
-
+    margin-right: -5px;
     font-family: 'Raleway Bold', sans-serif;
     font-size: 1em;
 }
@@ -849,7 +810,7 @@ form input{
 
 .single_heberg_box img{
     height:115px;
-    width:95%; /*Pas trouvé autre mais ce n'est pas la bonne façon de faire*/
+    width:98%; 
     border-radius: 15px 15px 0 0;
 }
 /*JUSTQUE LA*/
