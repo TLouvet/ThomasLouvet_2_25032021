@@ -7,17 +7,27 @@ src: url('fonts/Raleway-VariableFont_wght.ttf')
     font-family: 'Raleway Bold';
 src: url('fonts/Raleway-ExtraBold.ttf')
 }
-/*Paramètres pour toutes les spécifications*/
+
 *{
     font-family: 'Raleway',sans-serif;
 }
 
+/*************** Icones Etoiles *******************/
+.blue_star{
+    color: #0065FC;
+}
+
+.grey_star{
+    color: rgb(220,220,220);
+}
+
+/********Propriété unique dans tous le document *****************/
 body{
     margin:0;
 }
 
-ul {
-    list-style-type: none;
+.texte_gras{
+    font-weight: bold;
 }
 
 img{
@@ -40,7 +50,7 @@ p{
 h3, h4{
     font-size: 0.9em;
 }
-
+ /***************Site ************/
 header, #centre{
     max-width: 1440px;
     margin: auto;
@@ -48,9 +58,13 @@ header, #centre{
 
 /* Header */
 header{
-    height:135px; /*ok sur PC ET MOBILES*/
+    height:135px;
+    display: flex;
 }
 
+nav{
+    display: flex  ;
+}
 
 /*adapter ça en version mobile maintenant*/
 nav ul{
@@ -60,10 +74,16 @@ nav ul{
     margin-top: 0;
 }
 
-
 #inscription a{
     font-family: 'Raleway Bold';
     color: #0065FC;
+}
+
+/*Centre GLOBAL*/
+
+#main_title{
+    font-family: 'Raleway Bold', sans-serif;
+    margin: 0 0 10px 0;
 }
 
 /*recherche*/
@@ -72,6 +92,43 @@ nav ul{
     height: 50px;
     margin-bottom: 30px;
     margin-top: 15px;
+}
+
+#bouton_search:hover{
+    background-color: #DEEBFF;
+    color:#0065FC;
+    cursor: pointer;
+}
+
+/*Recherche par ville */
+
+#location_icon{
+    border-radius: 10px 0 0 10px;
+    background-color: #F2F2F2;
+    padding: 15px 20px 0 20px;
+}
+
+form input{
+    font-weight: bold;
+    padding-left: 15px;
+    height: 46px;
+    width: 230px;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px #F2F2F2 solid;
+    border-top: 1px #F2F2F2 solid;
+    margin-right: -5px;
+    font-size: 1em;
+}
+
+#bouton_search{ 
+    color:white;
+    background-color: #0065FC;
+    border-radius: 0 10px 10px 0;
+    border-style: none;
+    font-weight: bold;
+    padding: 1px 15px 1px 20px;
+    height: 50px;
 }
 
 /*Filtres*/
@@ -83,10 +140,6 @@ nav ul{
     margin-bottom: 40px;
 }
 
-.filtre p{
-    font-size: 1em;
-}
-
 .filtre{
     height: 50px;
     border-radius:30px;
@@ -94,7 +147,61 @@ nav ul{
     border-left: none;
     margin-right: 20px; /*PC*/
     display: flex;
+}
 
+#filtre_title{
+    margin-right:30px;
+    font-family: 'Raleway Bold', sans-serif;
+}
+
+.filtre p{
+    font-family: 'Raleway Bold', sans-serif;
+    padding-left: 15px;
+    padding-right: 20px;
+    font-size: 1em;
+}
+
+.filtre a{
+    display: flex;
+}
+
+.filtre:hover{
+    background-color: #0065FC;
+    color: white;
+    cursor: pointer;
+}
+
+.round_blue_bck{
+    width:50px;
+    height:50px;
+    background-color: #DEEBFF;
+    color: #0065FC;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/****/
+
+/*Logements dispo dans cette ville */
+#info{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+#info p{
+    margin:0; 
+    padding-top: 2px;
+    font-size: 0.9em;
+}
+
+#info_round{  
+    border: 2px solid #F2F2F2;
+    border-radius: 20px;
+    padding: 1px 6px;
+    margin-right: 10px;
+    color: #0065FC;
 }
 
 /*Section où sont présentés les hébergements*/
@@ -105,7 +212,7 @@ nav ul{
     width:100%
 }
 
-#heberg_box{ /*colonne sur tél*/
+#heberg_box{
     margin: 0;
     display: flex;
     flex-wrap: wrap;
@@ -119,11 +226,34 @@ nav ul{
     box-shadow: 0 0 15px rgb(220,220,220);
 }
 
+.img_hbg{
+    height:115px;
+    text-align: center;
+    margin: 5px 0 0 0;
+}
+
+.single_heberg_box img{
+    height:115px;
+    width:96%; 
+    border-radius: 15px 15px 0 0;
+}
+
+.text_heberg_box{
+    padding: 10px 0 0 15px;
+    height: 70px;
+}
+
+.text_heberg_box p, h4{ 
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
 #show_more{
     font-weight: bold;
     font-size:0.9em;
 }
 
+/********* PLUS POPULAIRE ************/
 #mostpop{
     background-color: #F2F2F2;
 }
@@ -149,6 +279,25 @@ nav ul{
     margin-bottom: 30px;
 }
 
+.mostpop_img img{
+    width:100%;
+    height: 100%;
+    border-radius: 17px 0 0 17px;
+}
+
+.mostpop_box_text{
+  padding: 20px 20px 15px 20px;
+}
+
+.mostpop_box_text h4{
+    margin-bottom:10px;
+    font-family: 'Raleway Bold', sans-serif;
+}
+
+.mostpop_box_text p{
+    margin:0 0 25px 0;
+}
+
 .mostpop_box a{
     display: flex;
     width: 100%;
@@ -162,7 +311,26 @@ nav ul{
     width:40%;
 }
 
-/*Activité général*/
+/*Activités*/
+
+#act div{
+    border-radius: 20px;
+}
+
+#act img{
+    width:100%; /*Les images ont toutes besoin de s'étirer à 100% de la largeur de l'élément dans cette section*/
+    border-radius: 20px 20px 0 0;
+}
+
+#act p{
+    margin: 0; /*GLOBAL*/
+}
+
+#act h4{
+    margin:0; /*GLOBAL*/
+    padding-top: 20px;
+    padding-left: 20px;
+}
 #act_box_wrap{
     display: flex;
     margin-bottom: 60px;
@@ -177,7 +345,6 @@ nav ul{
 .act_big_box img{
     height: 385px;
 }
-
 
 .act_small_box_wrap img{
     border-radius: 20px;
@@ -224,30 +391,35 @@ footer{
     background-color: #F2F2F2;
 }
 
+footer h3{
+    margin-top:0;
+    margin-bottom:25px;
+}
+
 footer ul{
     list-style-type: none;
     padding-left: 0;
+}
+
+/*Footer*/
+footer li{
+    padding-bottom: 15px;
 }
 
 /* Spécifications Version PC*/
 @media screen and (min-width: 1216px)
 {
     header, #centre{
-        padding-left: 50px; /*high res*/
-        padding-right: 50px;/*hight res*/
+        padding-left: 50px; 
+        padding-right: 50px;
     }
 
     header{
-        display: flex;
         justify-content: space-between;
     }
 
     #logo{
         padding-top: 50px;
-    }
-
-    nav{
-        display: flex  ;
     }
 
     nav li, #inscription{
@@ -265,7 +437,7 @@ footer ul{
 
     #hbgtspop{
         background-color: #F2F2F2;
-        padding: 45px 0 30px 0; /*PC*/
+        padding: 45px 0 30px 0; 
         border-radius: 20px;
         width:65.67%;
     }
@@ -276,10 +448,7 @@ footer ul{
 
     #heberg_box{
         height: 430px;
-        margin-top:0;
-        margin-bottom:40px;
-        margin-left:40px;
-        margin-right:40px;
+        margin: 0 40px 40px 40px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -316,6 +485,10 @@ footer ul{
         margin-bottom: 30px;
     }
 
+    #act{
+        padding-top: 30px;
+    }
+
     .act_small_box_wrap{
         width:22%;
         height:445px;
@@ -339,30 +512,25 @@ footer ul{
     }
 
     footer ul{
-        padding-right: 200px; /*Probablement pas la bonne solution*/
+        padding-right: 200px; 
     }
 }
 
-/******* TABLETTE **********************/
-/*Spec jusqu'à 1200px */
+/********************************************************* TABLETTE ***********************************************/
 @media all and (max-width:1215px)
 {
-    /*Header */
+    /************** Header *********************/
     header{
-        display: flex;
         flex-wrap: wrap;
     }
 
     #logo{
-        padding-left:3.5%;
-        padding-top: 30px;
-        padding-bottom:30px;
+        padding : 30px 0 30px 3.5%;
     }
 
     nav {
         width:100%;
         padding-bottom: 12px;
-        display: flex;
     }
 
     nav:last-child{
@@ -431,7 +599,6 @@ footer ul{
         color:#0065FC;
     }
 
-
     /*FILTRES*/
 
     #global_filtres{
@@ -445,9 +612,6 @@ footer ul{
         margin-bottom: 15px;
         margin-right:10px;
     }
-
-    /*INFOS*/
-
 
     /*** HEBERGEMENT***/
     #hebergement{
@@ -473,19 +637,15 @@ footer ul{
         flex-wrap: wrap;
     }
 
-    .single_heberg_box{ /* A TESTER ET EVENTUELLEMENT MODIFIER*/
+    .single_heberg_box{ 
         width: 31%;
         margin-bottom: 15px;
     } 
 
     /*ACTIVITES*/
-
     #act{
-        padding-left: 3.5%;
-        padding-right : 3.5%;
-        padding-bottom: 25px;
+        padding: 0 3.5% 25px 3.5%;
     }
-
 
     #act h2{
         margin-bottom:35px;
@@ -506,7 +666,6 @@ footer ul{
         width: 100%;
     }
 
-
     .act_big_box{
         height:445px;
         margin-bottom: 25px;
@@ -521,14 +680,9 @@ footer ul{
         height: 150px;
     }
 
-
     /**FOOTER TABLETTE*/
-
     footer{
-        padding-top: 40px;
-        padding-bottom: 10px;
-        padding-left: 3.5%;
-        padding-right:4%;
+        padding: 40px 4% 10px 3.5%;
     }
 
     #footer-list__wrapper{
@@ -537,16 +691,15 @@ footer ul{
     }
 }
 
+/*********** Legers ajustements pour les tablettes **********************/
 @media all and (max-width: 1039px) {
-    /* Les filtres se réorganisent à partir de 1024px*/  
-    
     #filtre_title{
         width:100%;
-    }
-  
+    }  
 }
 
-@media all and (min-width:615px) and (max-width: 814px) /*pour les basoins du test*/
+
+@media all and (min-width:615px) and (max-width: 814px)
 {
     #hebergement{
         height: 1450px;
@@ -558,7 +711,7 @@ footer ul{
     }
 }
 
-/*Spécification petites rés*/
+/********************************************************** MOBILE  *************************************************/ 
 @media all and (max-width:614px)
 {
     /* Header - spécifique version mobile*/
@@ -571,10 +724,6 @@ footer ul{
         right:20px;
         top: 40px;
     } 
-    /*CENTRE - spécifique mobile*/
-
-    /*Recherche*/
-
     /* Filtres*/
 
     #global_filtres{
@@ -589,8 +738,6 @@ footer ul{
         margin-right:10px;
     }
 
-
-    /* Info <480px */
     #info{padding-right: 25px;}
 
     #info_round{
@@ -613,7 +760,6 @@ footer ul{
         margin : 0 20px 20px 20px;
     }
 
-    /*box qui contient toutes les bulles CA MERDE ICI ZZZZ*/
     #heberg_box{
         height: 1300px;
         margin-top:0;
@@ -625,6 +771,10 @@ footer ul{
     .single_heberg_box{
         box-shadow: 0 0 15px rgb(220,220,220);
         width:100%;
+    }
+
+    .single_heberg_box img{
+        width: 98%;
     }
 
     #mostpop{
@@ -665,12 +815,7 @@ footer ul{
         width:100%;
     }
 
-    .act_big_box{
-        height:190px;
-        margin-bottom: 25px;
-    }
-
-    .act_small_box_wrap #act_smallbox_medium,  #act_smallbox_small, #act_smallbox_large, #act_smallbox_medium_plus{
+    .act_small_box_wrap #act_smallbox_medium,  #act_smallbox_small, #act_smallbox_large, #act_smallbox_medium_plus, .act_big_box{
         height: 190px;
         margin-bottom: 25px;
     }
@@ -684,9 +829,7 @@ footer ul{
     }
     /*Footer Low res*/
     footer{
-        padding-bottom:1px;
-        padding-left:20px;
-        padding-top: 45px;
+        padding: 45px 0 1px 20px;
     }
 
     #footer-list__wrapper{
@@ -701,211 +844,4 @@ footer ul{
         margin-bottom: 50px;
     } 
 }
-
-/*Centre GLOBAL*/
-
-#main_title{
-    font-family: 'Raleway Bold', sans-serif;
-    margin-bottom: 10px;
-    margin-top: 0;
-}
-
-/*Recherche par ville */
-
-#location_icon{
-    padding-left:20px;
-    padding-right:20px;
-    border-radius: 10px 0 0 10px;
-    background-color: #F2F2F2;
-    padding-top: 15px;  
-}
-
-form input{
-    font-weight: bold;
-    padding-left: 15px;
-    height: 46px;
-    width: 230px;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px #F2F2F2 solid;
-    border-top: 1px #F2F2F2 solid;
-    margin-right: -5px;
-    font-family: 'Raleway Bold', sans-serif;
-    font-size: 1em;
-}
-
-#bouton_search{ 
-    color:white;
-    background-color: #0065FC;
-    border-radius: 0 10px 10px 0;
-    border-style: none;
-    font-weight: bold;
-    padding-left:20px;
-    padding-right:15px;
-    height: 50px;
-    font-family: 'Raleway Bold', sans-serif;
-}
-
-/*GLOBAL*/
-#bouton_search:hover{
-    background-color: #DEEBFF;
-    color:#0065FC;
-    cursor: pointer;
-}
-
-/*Recherche par filtre*/
-
-#filtre_title{
-    margin-right:30px;
-    font-family: 'Raleway Bold', sans-serif;
-}
-
-.filtre p{
-    font-family: 'Raleway Bold', sans-serif;
-}
-
-
-.filtre a{
-    display: flex;
-}
-
-.filtre:hover{
-    background-color: #0065FC;
-    color: white;
-    cursor: pointer;
-}
-
-.round_blue_bck{
-    width:50px;
-    height:50px;
-    background-color: #DEEBFF;
-    color: #0065FC;
-    border-radius: 25px;
-
-    /*aligne l'icone à l'intérieur*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-.filtre p{
-    padding-left: 15px;
-    padding-right: 20px;
-}
-
-/*Logements dispo dans cette ville */
-#info{
-    display: flex;
-    margin-bottom: 40px;
-}
-
-#info p{
-    margin:0; 
-    padding-top: 2px;
-}
-
-#info_round{  
-    border: 2px solid #F2F2F2;
-    border-radius: 20px;
-    padding: 1px 6px;
-    margin-top:0;
-    margin-right: 10px;
-    color: #0065FC;
-}
-
-/****/
-
-/*IL Y A UN TRUC A CHANGER LA*/
-.img_hbg{
-    height:115px;
-    margin-top:5px;
-    text-align: center;
-    margin-bottom: 0;
-}
-
-.single_heberg_box img{
-    height:115px;
-    width:98%; 
-    border-radius: 15px 15px 0 0;
-}
-/*JUSTQUE LA*/
-
-.text_heberg_box{
-    padding-top: 10px;
-    padding-left: 15px;
-    height: 70px;
-}
-
-.text_heberg_box p, h4{ 
-    margin-top: 0;
-    margin-bottom: 5px;
-}
-
-/*Ca c'est global donc ça ne bouge pas */
-.texte_gras{
-    font-weight: bold;
-}
-
-.blue_star{
-    color: #0065FC;
-}
-
-.grey_star{
-    color: rgb(220,220,220);
-}
-
-/*Partie Les plus populaire - pas besoin de modification*/
-
-.mostpop_img img{
-    width:100%;
-    height: 100%;
-    border-radius: 17px 0 0 17px;
-}
-
-.mostpop_box_text{
-  padding: 20px 20px 15px 20px;
-}
-
-.mostpop_box_text h4{
-    margin-bottom:10px;
-    font-family: 'Raleway Bold', sans-serif;
-}
-
-.mostpop_box_text p{
-    margin:0 0 25px 0;
-}
-
-/*Activités*/
-
-#act div{
-    border-radius: 20px;
-}
-
-#act img{
-    width:100%; /*Les images ont toutes besoin de s'étirer à 100% de la largeur de l'élément dans cette section*/
-    border-radius: 20px 20px 0 0;
-}
-
-#act p{
-    margin: 0; /*GLOBAL*/
-}
-
-#act h4{
-    margin:0; /*GLOBAL*/
-    padding-top: 20px;
-    padding-left: 20px;
-}
-
-/*Footer*/
-
-footer h3{
-    margin-top:0;
-    margin-bottom:25px;
-}
-
-footer li{
-    padding-bottom: 15px;
-}
+/******************************************************************* Fin Res Mobile ***************************************/
