@@ -445,9 +445,7 @@ footer ul{
     }
 
     #mostpop, #hbgtspop{
-        padding-left: 3.5%;
-        padding-right:3.5%;
-        padding-bottom: 20px;
+        padding: 20px 3.5%;
     }
 
     .mostpop_box{
@@ -515,7 +513,7 @@ footer ul{
     /**FOOTER TABLETTE*/
 
     footer{
-        padding-top: 30px;
+        padding-top: 40px;
         padding-bottom: 10px;
         padding-left: 3.5%;
         padding-right:4%;
@@ -538,7 +536,7 @@ footer ul{
 {
     /*Hébergement <768px*/
     #hebergement{
-        height: 1400px;
+        height: 1450px;
     }
 
     .single_heberg_box{
@@ -666,6 +664,10 @@ footer ul{
 
     #act_box_wrap img{
         height:130px; /*toutes les images font la même taille sur version mobile, autant utiliser la div au dessus*/
+    }
+
+    .act_small_box_wrap #act_smallbox_medium img{
+        height: 130px;
     }
     /*Footer Low res*/
     footer{
