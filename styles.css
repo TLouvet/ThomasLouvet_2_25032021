@@ -41,6 +41,11 @@ h3, h4{
     font-size: 0.9em;
 }
 
+header, #centre{
+    max-width: 1440px;
+    margin: auto;
+}
+
 /* Header */
 header{
     height:135px; /*ok sur PC ET MOBILES*/
@@ -228,7 +233,6 @@ footer ul{
 @media screen and (min-width: 1216px)
 {
     header, #centre{
-        margin: 0;
         padding-left: 50px; /*high res*/
         padding-right: 50px;/*hight res*/
     }
@@ -282,7 +286,7 @@ footer ul{
     }
 
     .single_heberg_box{
-        height: 200px; /* PC ET MOBILES*/
+        height: 200px;
         width: 31.25%;
         background-color: white;
         margin-bottom: 30px;
@@ -322,7 +326,15 @@ footer ul{
 
     footer{
         height:140px;
-        padding: 50px;
+        padding: 50px 0;
+        display: flex;
+    }
+
+    #footer-list__wrapper{
+        max-width: 1440px;
+        min-width: 1215px;
+        padding: 0 50px;
+        margin: auto;
         display: flex;
     }
 
@@ -439,7 +451,7 @@ footer ul{
 
     /*** HEBERGEMENT***/
     #hebergement{
-        height: 1200px;
+        height: 1240px;
         flex-direction: column-reverse;
         padding-bottom: 1px;
     }
@@ -517,6 +529,9 @@ footer ul{
         padding-bottom: 10px;
         padding-left: 3.5%;
         padding-right:4%;
+    }
+
+    #footer-list__wrapper{
         display: flex;
         justify-content: space-between;
     }
@@ -531,10 +546,8 @@ footer ul{
   
 }
 
-/*Spécifications Tablette jusqu'à 768px*/
 @media all and (min-width:615px) and (max-width: 814px) /*pour les basoins du test*/
 {
-    /*Hébergement <768px*/
     #hebergement{
         height: 1450px;
     }
@@ -674,6 +687,9 @@ footer ul{
         padding-bottom:1px;
         padding-left:20px;
         padding-top: 45px;
+    }
+
+    #footer-list__wrapper{
         flex-direction: column;
     }
 
@@ -683,7 +699,7 @@ footer ul{
 
     .footer_sous_liste{
         margin-bottom: 50px;
-    } /*A FINIR BIP BIP*/
+    } 
 }
 
 /*Centre GLOBAL*/
