@@ -75,14 +75,12 @@ nav ul{
 }
 
 #inscription a{
-    font-family: 'Raleway Bold';
     color: #0065FC;
 }
 
 /*Centre GLOBAL*/
 
 #main_title{
-    font-family: 'Raleway Bold', sans-serif;
     margin: 0 0 10px 0;
 }
 
@@ -92,6 +90,11 @@ nav ul{
     height: 50px;
     margin-bottom: 30px;
     margin-top: 15px;
+}
+
+#ville:focus{
+    outline: none;
+    background-color:#DEEBFF;
 }
 
 #bouton_search:hover{
@@ -117,7 +120,7 @@ form input{
     border-right: none;
     border-bottom: 1px #F2F2F2 solid;
     border-top: 1px #F2F2F2 solid;
-    margin-right: -5px;
+    margin-right: -10px;
     font-size: 1em;
 }
 
@@ -151,11 +154,9 @@ form input{
 
 #filtre_title{
     margin-right:30px;
-    font-family: 'Raleway Bold', sans-serif;
 }
 
 .filtre p{
-    font-family: 'Raleway Bold', sans-serif;
     padding-left: 15px;
     padding-right: 20px;
     font-size: 1em;
@@ -287,11 +288,13 @@ form input{
 
 .mostpop_box_text{
   padding: 20px 20px 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .mostpop_box_text h4{
     margin-bottom:10px;
-    font-family: 'Raleway Bold', sans-serif;
 }
 
 .mostpop_box_text p{
@@ -407,7 +410,7 @@ footer li{
 }
 
 /* Spécifications Version PC*/
-@media screen and (min-width: 1216px)
+@media only screen and (min-width: 1200px)
 {
     header, #centre{
         padding-left: 50px; 
@@ -505,7 +508,7 @@ footer li{
 
     #footer-list__wrapper{
         max-width: 1440px;
-        min-width: 1215px;
+        width:1440px;
         padding: 0 50px;
         margin: auto;
         display: flex;
@@ -517,7 +520,7 @@ footer li{
 }
 
 /********************************************************* TABLETTE ***********************************************/
-@media all and (max-width:1215px)
+@media only screen and (max-width:1200px)
 {
     /************** Header *********************/
     header{
@@ -692,14 +695,14 @@ footer li{
 }
 
 /*********** Legers ajustements pour les tablettes **********************/
-@media all and (max-width: 1039px) {
+@media only screen and (max-width: 1024) {
     #filtre_title{
         width:100%;
     }  
 }
 
 
-@media all and (min-width:615px) and (max-width: 814px)
+@media only screen and (min-width:600px) and (max-width: 800px)
 {
     #hebergement{
         height: 1450px;
@@ -712,7 +715,7 @@ footer li{
 }
 
 /********************************************************** MOBILE  *************************************************/ 
-@media all and (max-width:614px)
+@media only screen and (max-width:600px)
 {
     /* Header - spécifique version mobile*/
     #logo{
