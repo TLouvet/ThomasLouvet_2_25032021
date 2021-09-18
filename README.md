@@ -23,5 +23,3 @@ Pour développer la page :
 - Tests effectués sur Google Chrome et Mozilla Firefox
 - Versionning : Git et Github
 - Validation du code au W3C
-
-Projet commencé le 25-03-2021 et validé en soutenance le 15-04-2021
